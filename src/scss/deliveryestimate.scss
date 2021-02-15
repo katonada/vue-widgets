@@ -1,0 +1,24 @@
+.ecom {
+
+  &__delivery {
+    position: relative;
+    padding: 10px 0;
+    font-size: 14px;
+    line-height: 24px;
+    color: #555;
+    border-bottom: 1px solid #ccc;
+
+    @media only screen and (min-width: 1024px) {
+      padding: 21px 0 20px;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    span {
+      font-weight: 600;
+      color: #f53794;
+    }
+  }
+}

@@ -1,0 +1,141 @@
+.ecom {
+
+  &__slider {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0;
+    padding: 0;
+
+    .slider-main {
+      position: relative;
+      width: 100%;
+
+      @media only screen and (min-width: 1024px) {
+        width: 87.25%;
+      }
+    }
+
+    .slider-vertical {
+      position: relative;
+      display: none;
+
+      @media only screen and (min-width: 1024px) {
+        display: block;
+        width: 12.75%;
+      }
+
+      &--disabled {
+        @media only screen and (min-width: 1024px) {
+          width: 0;
+        }
+      }
+    }
+
+    &-item {
+      position: relative;
+      display: block;
+      margin: 0;
+      padding: 0;
+      outline: none;
+    }
+
+    &-figure {
+      position: relative;
+      display: block;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+
+      @media only screen and (min-width: 1024px) {
+        margin: 0 0 45px !important;
+      }
+
+      img {
+        position: relative;
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    // Slick override
+    .slick-list {
+      max-width: 250px;
+      margin: 0 auto;
+      overflow: inherit;
+      transform: translateZ(0);
+      overflow: initial !important;
+
+      @media only screen and (min-width: 1024px) {
+        max-width: 71.5%;
+      }
+    }
+
+    .slick-vertical {
+
+      @media only screen and (min-width: 1024px) {
+        padding-top: 15px;
+      }
+
+      .slick-list {
+        max-height: none !important;
+
+        @media only screen and (min-width: 1024px) {
+          max-width: 100%;
+          height: auto !important;
+          overflow: hidden !important;
+        }
+      }
+      .slick-track {
+        height: auto !important;
+      }
+    }
+
+    .slick-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      appearance: none;
+      display: block;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 0;
+      font-size: 0;
+      cursor: pointer;
+
+      &:after {
+        font-family: foreo;
+        speak: none;
+        font-style: normal;
+        font-weight: 400;
+        font-variant: normal;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 34px;
+        color: #666;
+      }
+
+      &.slick-prev {
+        left: 0;
+
+        &:after {
+          content: "\e314";
+        }
+      }
+
+      &.slick-next {
+        right: 0;
+
+        &:after {
+          content: "\e315";
+        }
+      }
+    }
+  }
+}

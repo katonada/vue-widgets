@@ -1,0 +1,337 @@
+@font-face {
+  font-family: "URW-DIN-Light";
+  src: url("https://assets.foreo.com/files/static/fonts/URWDIN/URWDINLight.otf") format("opentype"),
+  url("https://assets.foreo.com/files/static/fonts/URWDIN/URWDINLight.ttf") format("truetype"),
+  url("https://assets.foreo.com/files/static/fonts/URWDIN/URWDINLight.woff") format("woff"),
+  url("https://assets.foreo.com/files/static/fonts/URWDIN/URWDINLight.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "URW-DIN-Bold";
+  src: url("https://assets.foreo.com/files/static/fonts/URWDIN/URWDINBold.otf") format("opentype"),
+  url("https://assets.foreo.com/files/static/fonts/URWDIN/URWDINBold.ttf") format("truetype"),
+  url("https://assets.foreo.com/files/static/fonts/URWDIN/URWDINBold.woff") format("woff"),
+  url("https://assets.foreo.com/files/static/fonts/URWDIN/URWDINBold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ecom__wrap--faqswiss {
+  background-color: #151515;
+  padding: 80px 0 35px;
+
+  // Slider and images.
+  .ecom__media {
+
+    @media only screen and (min-width: 768px) {
+      margin: -10px 0 0;
+    }
+  }
+
+  .ecom__slider {
+
+    @media only screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-end;
+      flex-wrap: wrap;
+    }
+  }
+
+  .slider-main {
+
+    @media only screen and (min-width: 768px) {
+      width: 75%;
+    }
+
+    .ecom__slider-figure {
+      background-color: #151515;
+    }
+  }
+
+  .slick-vertical {
+
+    @media only screen and (min-width: 768px) {
+      width: 75%;
+      padding-top: 0;
+    }
+
+    .slick-track {
+
+      @media only screen and (min-width: 768px) {
+        display: flex;
+        // Force auto height since slider's natural flow is changed from vertical to horizontal.
+        height: auto !important;
+      }
+
+      .ecom__slider-figure {
+        background-color: transparent;
+
+        img {
+
+          @media only screen and (min-width: 768px) {
+            max-width: 75%;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+
+    .slick-list {
+
+      @media only screen and (min-width: 768px) {
+        margin: -30px 0 0;
+      }
+    }
+  }
+
+  .ecom__media {
+
+    .slick-list {
+      max-width: none;
+    }
+  }
+
+  // Info.
+  .ecom__data {
+    padding: 0 45px;
+    box-sizing: border-box;
+
+    @media only screen and (min-width: 768px) {
+      padding: 0 10%;
+    }
+  }
+
+  .ecom__info {
+    margin: 60px 0 0;
+  }
+
+  .ecom__info-title {
+    font-family: URW-DIN-Bold;
+    font-size: 8.75vw;
+    font-weight: initial;
+    color: #ff0062;
+    margin: 0;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 30px;
+      line-height: 30px;
+      margin: 0 0 5px;
+    }
+
+    &:after {
+      content: none;
+    }
+  }
+
+  .ecom__info-subtitle {
+    font-family: URW-DIN-Light;
+    font-size: 4.5vw;
+    font-weight: initial;
+    text-transform: uppercase;
+    color: #ff0062;
+    margin: 0 0 25px;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0 0 30px;
+    }
+  }
+
+  .ecom__info-description-wrap {
+    max-height: none;
+    overflow-y: initial;
+    transition: none;
+  }
+
+  .ecom__info-description {
+    font-family: URW-DIN-Light;
+    font-size: 4vw;
+    line-height: 6.5vw;
+    font-weight: initial;
+    color: #fff;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .ecom__delivery {
+    font-family: URW-DIN-Light;
+    font-size: 3.25vw;
+    line-height: 5vw;
+    font-weight: initial;
+    color: #fff;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    span,
+    strong {
+      color: #ff0062;
+    }
+  }
+
+  // Variation switcher.
+  .ecom__switcher {
+    margin: 0 0 20px;
+
+    @media only screen and (min-width: 768px) {
+      padding: 10px 0 0;
+    }
+  }
+
+  .ecom__switcher-title {
+    font-family: URW-DIN-Light;
+    font-size: 4.25vw;
+    line-height: 5vw;
+    font-weight: initial;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0 0 7px;
+    }
+
+    span {
+      color: #fff;
+    }
+  }
+
+  .ecom__switcher-dots {
+    padding: 0 0 20px;
+    border-bottom: none;
+
+    @media only screen and (min-width: 768px) {
+      padding: 0 0 24%;
+    }
+
+    &:after {
+      box-shadow: 0 0 0 1px #666;
+    }
+
+    span {
+      width: 14px;
+      height: 14px;
+      top: -3px;
+      left: -3px;
+
+      &:after {
+        top: 0;
+        left: 0;
+      }
+    }
+
+    input {
+
+      &:checked {
+
+        ~ span:after {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+
+  .ecom__switcher-dot {
+    width: 14px;
+    height: 14px;
+    margin: 0 20px 0 0;
+    border: 2px solid #151515;
+
+    input {
+      width: 16px;
+      height: 16px;
+      margin: 0;
+    }
+  }
+
+  .ecom__price-original {
+    font-family: URW-DIN-Bold;
+    font-size: 4.75vw;
+    line-height: 4.75vw;
+    font-weight: initial;
+    color: #ff0062;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  .ecom__btn {
+    font-family: URW-DIN-Bold;
+    font-size: 4.25vw;
+    line-height: 5.5vw;
+    font-weight: initial;
+    background-color: #ff0062;
+    border-color: #ff0062;
+    padding: 8px 20px 6px;
+
+    @media only screen and (min-width:768px) {
+      font-size: 16px;
+      line-height: 20px;
+      width: 100%;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    &--disabled {
+      background-color: #414141;
+      border-color: #414141;
+    }
+  }
+
+  // Perks.
+  .ecom__perk {
+
+    @media only screen and (min-width:768px) {
+      width: 100%;
+    }
+  }
+
+  .ecom__perk-icon {
+    display: none;
+  }
+
+  .ecom__perk-desc-wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  .ecom__perk-title {
+    font-family: URW-DIN-Bold;
+    font-size: 3.5vw;
+    line-height: 4vw;
+    color: #808080;
+    margin: 0 5px 0 0;
+
+    [dir="rtl"] & {
+      margin: 0 0 0 5px;
+    }
+
+    @media only screen and (min-width: 768px) {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+
+  .ecom__perk-desc {
+    font-family: URW-DIN-Bold;
+    font-size: 3.5vw;
+    line-height: 4vw;
+    color: #fff;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+}

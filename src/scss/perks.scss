@@ -1,0 +1,62 @@
+.ecom {
+
+  &__perks {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column nowrap;
+
+    @media only screen and (min-width: 1024px) {
+      flex-flow: row wrap;
+      align-items: flex-start;
+    }
+
+    &:not(:empty) {
+      padding: 20px 0;
+      border-top: 1px solid #ccc;
+    }
+  }
+
+  &__perk {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 0 20px;
+    padding: 0;
+
+    @media only screen and (min-width: 1024px) {
+      width: 33.332%;
+    }
+  }
+
+  &__perk-icon {
+    max-width: 22px;
+    width: 100%;
+    height: auto;
+    margin: 0 20px 0 0;
+    padding: 0;
+
+    [dir="rtl"] & {
+      margin: 0 0 0 20px;
+    }
+  }
+
+  &__perk-title {
+    position: relative;
+    margin: 0 0 2px;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #555;
+  }
+
+  &__perk-desc {
+    position: relative;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #555;
+  }
+}

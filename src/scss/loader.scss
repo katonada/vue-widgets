@@ -1,0 +1,23 @@
+.ecom {
+
+  &__images-loader {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+
+    @media only screen and (min-width: 1024px) {
+      top: 225px;
+      left: 60%;
+    }
+
+    svg {
+      position: relative;
+      display: block;
+      width: 100px;
+      height: 100px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

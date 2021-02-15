@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'foreo';
+  src: url('https://assets.foreo.com/files/static/fonts/icomoon/icomoon.eot?f0xcy6');
+  src: url('https://assets.foreo.com/files/static/fonts/icomoon/icomoon.eot?f0xcy6#iefix') format('embedded-opentype'),
+  url('https://assets.foreo.com/files/static/fonts/icomoon/icomoon.ttf?f0xcy6') format('truetype'),
+  url('https://assets.foreo.com/files/static/fonts/icomoon/icomoon.woff?f0xcy6') format('woff'),
+  url('https://assets.foreo.com/files/static/fonts/icomoon/icomoon.svg?f0xcy6#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.ecom {
+  position: relative;
+  font-family: Montserrat, sans-serif;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &__wrap {
+    background: #fff;
+    margin: 0;
+    padding: 10px 0 60px;
+
+    @media only screen and (min-width: 768px) {
+      padding: 60px 0;
+    }
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0;
+
+    @media only screen and (min-width: 768px) {
+      flex-flow: row nowrap;
+    }
+  }
+
+  &__media {
+    position: relative;
+    width: 100%;
+    // Set min height to avoid page glitching before image is loaded.
+    min-height: 315px;
+    overflow: hidden;
+    z-index: 1;
+
+    @media only screen and (min-width: 768px) {
+      width: 50%;
+      min-height: auto;
+    }
+  }
+
+  &__images {
+    position: relative;
+
+    @media only screen and (min-width: 768px) {
+      padding: 0 15px;
+    }
+  }
+
+  &__data {
+    z-index: 2;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    @media only screen and (min-width: 768px) {
+      width: 50%;
+    }
+  }
+
+  // Commerce B block used for brush heads on Issa product pages.
+  &--ecommerce_b {
+
+    .ecom__wrap {
+      padding: 10px 0 0;
+    }
+
+    .ecom__container {
+
+      @media only screen and (min-width: 768px) {
+        flex-direction: column;
+        flex-wrap: nowrap;
+      }
+
+      @media only screen and (min-width: 1024px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+
+    .ecom__media {
+      @media only screen and (min-width: 768px) {
+        width: 100%;
+      }
+
+      @media only screen and (min-width: 1024px) {
+        width: 50%;
+      }
+    }
+
+    .ecom__b-figure {
+      position: relative;
+      max-width: 250px;
+      margin: 0 auto;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .ecom__b-promo {
+      position: absolute;
+      top: 15px;
+      right: 50px;
+      max-width: 93px;
+      margin: 0 auto;
+
+      [dir="rtl"] & {
+        right: auto;
+        left: 50px
+      }
+
+      @media only screen and (min-width: 1024px) {
+        right: 30px;
+
+        [dir="rtl"] & {
+          right: auto;
+          left: 30px
+        }
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .ecom__data {
+
+      @media only screen and (min-width: 768px) {
+        width: 100%;
+      }
+
+      @media only screen and (min-width: 1024px) {
+        width: 50%;
+        padding: 0;
+      }
+    }
+
+    .ecom__info {
+      margin: 25px 0 0;
+
+      @media only screen and (min-width: 1024px) {
+        margin: 5px 0 0;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    .ecom__info-title {
+
+      @media only screen and (min-width: 768px) {
+        font-size: 20px;
+        line-height: 32px;
+        font-weight: 500;
+      }
+    }
+
+    .ecom__switcher {
+
+      @media only screen and (min-width: 1024px) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    .ecom__switcher-title {
+      text-align: left;
+      [dir="rtl"] & {
+        text-align: right;
+      }
+    }
+
+    .ecom__delivery {
+      padding-bottom: 0;
+      border-bottom: none;
+      text-align: left;
+      [dir="rtl"] & {
+        text-align: right;
+      }
+
+      @media only screen and (min-width: 1024px) {
+        padding: 10px 0 0;
+      }
+
+      &:after {
+        left: 0;
+        right: 0;
+      }
+    }
+
+    .ecom__atc {
+
+      @media only screen and (min-width: 1024px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      @media only screen and (min-width: 1024px) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      &:after {
+        content: none;
+      }
+    }
+
+    .ecom__price {
+
+      @media only screen and (min-width: 1024px) {
+        width: 100%;
+      }
+    }
+
+    .ecom__atc-buy {
+
+      @media only screen and (min-width: 1024px) {
+        width: 100%;
+      }
+    }
+
+    .ecom__btn {
+
+      @media only screen and (min-width: 1024px) {
+        width: 100%;
+      }
+    }
+
+    .ecom__perks {
+
+      @media only screen and (min-width: 1024px) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}

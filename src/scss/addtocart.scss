@@ -1,0 +1,285 @@
+.ecom {
+
+  &__atc {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    padding: 11px 0 0;
+
+    @media only screen and (min-width: 1024px) {
+      flex-flow: row nowrap;
+    }
+  }
+
+  &__atc-price {
+    @media only screen and (min-width: 1024px) {
+      width: 50%;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      width: 55%;
+    }
+  }
+
+  &__price {
+    padding: 0 0 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (min-width: 1024px) {
+      justify-content: center;
+      flex-flow: column wrap;
+      width: 50%;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      width: 55%;
+      align-items: flex-start;
+    }
+  }
+
+  &__price-multi {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+
+    @media only screen and (min-width: 1024px) {
+      flex-flow: row nowrap;
+    }
+  }
+
+  &__price-original {
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #1f252a;
+  }
+
+  &__price-discounted {
+    font-size: 22px;
+    line-height: 24px;
+    color: #f53794;
+    font-weight: 600;
+
+    @media only screen and (min-width: 1024px) {
+      margin-right: 10px;
+    }
+  }
+
+  &__price-old {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    text-decoration: line-through;
+    color: #333333;
+  }
+
+  &__price-save {
+    position: relative;
+    display: inline-block;
+    padding: 5px 12px;
+    background: #f53794;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  &__installments {
+    margin: 7px 0 0;
+
+    p {
+      margin: 0;
+    }
+
+    span {
+      font-family: 'Montserrat';
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  &__vat {
+    width: 100%;
+    font-family: 'Montserrat';
+    font-size: 10px;
+    line-height: 14px;
+    color: #575757;
+    text-align: left;
+    text-transform: none;
+    margin: 10px 0 0;
+
+    [dir="rtl"] & {
+      text-align: right;
+    }
+
+    a {
+      color: #575757;
+    }
+  }
+
+  &__atc-buy {
+    margin-top: 6px;
+
+    @media only screen and (min-width: 1024px) {
+      width: 50%;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      width: 45%;
+    }
+  }
+
+  &__btn {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 13px 20px 11px;
+    margin: 0 0 20px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    background-color: #1f252a;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: normal;
+    color: #fff;
+    outline: none;
+    border: 1px solid #1f252a;
+    cursor: pointer;
+    transition: all .2s cubic-bezier(.25, .8, .25, 1);
+    text-align: center;
+    user-select: none;
+
+    @media only screen and (min-width: 1024px) {
+      width: auto;
+      float: right;
+      padding-left: 44px;
+      padding-right: 44px;
+
+      [dir="rtl"] & {
+        float: left;
+      }
+    }
+
+    &--disabled {
+      background-color: #949ea6;
+      border-color: #949ea6;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    &--buyat {
+      background-color: #1f252a;
+      border-color: #1f252a;
+
+      figure {
+        position: relative;
+        display: inline-block;
+        padding: 0;
+        height: 18px;
+        width: auto;
+
+        img {
+          position: relative;
+          display: block;
+          height: 100%;
+          width: auto;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  // Mask bundle type-specific styles.
+  &--bundle-masks {
+
+    .ecom__atc-buy {
+      border-bottom: 1px solid #ccc;
+
+      @media only screen and (min-width: 1024px) {
+        border-bottom: none;
+      }
+    }
+
+    .ecom__price-multi {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ecom__price-old {
+      margin: 0;
+    }
+
+    .ecom__price-discounted {
+      margin: 0;
+    }
+
+    .ecom__atc-buy {
+
+      @media only screen and (min-width: 1024px) {
+        margin: 0;
+      }
+    }
+
+    .ecom__btn {
+
+      @media only screen and (min-width: 1024px) {
+        margin: 0;
+      }
+    }
+  }
+
+  &__popup {
+    box-sizing: border-box;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    max-width: 75%;
+    margin: 0;
+    padding: 30px 30px 15px;
+    background-color: #FFF;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.16);
+    transition: all 0.4s cubic-bezier(.25, .8, .25, 1);
+    user-select: none;
+  }
+
+  &__popup-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    min-height: 120px;
+  }
+
+  &__popup-content {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  &__popup-btn {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    font-size: 18px;
+    padding: 15px 20px;
+    background: #f53794;
+    color: #FFF;
+    font-weight: 800;
+    cursor: pointer;
+  }
+}

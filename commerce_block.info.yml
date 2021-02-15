@@ -1,0 +1,18 @@
+name: Commerce iBlock
+machine_name: commerce_block
+type: pdb
+description: 'E-commerce iBlock decupled.'
+package: custom
+core: '8.x'
+module_status: active
+presentation: vue
+configuration:
+  productId:
+    type: number
+    default_value: 0
+  productType:
+    type: textfield
+    default_value: ''
+add_js:
+  footer:
+    'dist/app.js': {}

@@ -1,0 +1,224 @@
+.ecom__info {
+  box-sizing: border-box;
+  margin: 40px 0 0;
+  text-align: left;
+
+  [dir="rtl"] & {
+    text-align: right;
+  }
+
+  &-title {
+    position: relative;
+    margin: 0 0 10px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #333;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 36px;
+      line-height: 44px;
+      font-weight: 300;
+    }
+
+    &.js_active {
+
+      &:after {
+        transform: rotate(-180deg);
+
+        @media only screen and (min-width: 1024px) {
+          transform: none;
+        }
+      }
+    }
+
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-family: foreo;
+      speak: none;
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-size: 30px;
+      color: #555;
+      content: "\e313";
+      transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+      [dir="rtl"] & {
+        right: auto;
+        left: 0;
+      }
+
+      @media only screen and (min-width: 1024px) {
+        content: none;
+      }
+    }
+
+    // BazaarVoice override
+    .bv_stars_button_container {
+      position: relative;
+      left: 5px;
+      top: -5px;
+      background: transparent;
+      border: none;
+      outline: none;
+      margin: 0;
+      padding: 0;
+
+      [dir="rtl"] & {
+        left: auto;
+        right: 5px;
+      }
+
+      @media only screen and (min-width: 768px) {
+        top: -2px;
+      }
+    }
+  }
+
+  &-contains {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #20262b;
+    margin: 0 0 10px;
+
+    b,
+    strong {
+      font-weight: 500;
+    }
+  }
+
+  &-subtitle {
+    margin: 0 0 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #555;
+
+    @media only screen and (min-width: 1024px) {
+      margin: 10px 0;
+    }
+  }
+
+  &-description-wrap {
+    max-height: 0;
+    overflow-y: hidden;
+    border-bottom: 1px solid #ccc;
+    transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    @media only screen and (min-width: 1024px) {
+      max-height: none;
+      overflow-y: initial;
+      transition: none;
+    }
+
+    &.js_active {
+      max-height: 500px;
+
+      @media only screen and (min-width: 1024px) {
+        max-height: none;
+      }
+    }
+  }
+
+  &-description {
+    padding-bottom: 10px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #555;
+    transition: all .3s ease-in-out;
+
+    @media only screen and (min-width: 1024px) {
+      padding-bottom: 20px;
+    }
+
+    b,
+    strong {
+      font-weight: 600;
+    }
+  }
+
+  &-works-with {
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+    color: #555;
+
+    @media only screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      padding: 25px 0;
+    }
+
+    &-label {
+      font-family: 'Montserrat';
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 400;
+      margin: 0 0 5px;
+
+      @media only screen and (min-width: 768px) {
+        width: 100%;
+      }
+
+      @media only screen and (min-width: 1280px) {
+        width: auto;
+        margin: 0 25px 0 0;
+
+        [dir="rtl"] & {
+          margin: 0 0 0 25px;
+        }
+      }
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin: 0 0 2px 0;
+      font-family: 'Montserrat';
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+
+      @media only screen and (min-width: 1280px) {
+        width: auto;
+        margin: 0 50px 0 0;
+
+        [dir="rtl"] & {
+          margin: 0 0 0 50px;
+        }
+      }
+    }
+
+    &-icon {
+
+      &:before {
+        font-family: 'foreo';
+        speak: none;
+        font-style: normal;
+        font-weight: 400;
+        font-variant: normal;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: '\e92a';
+        font-size: 22px;
+        margin: 0 10px 0 0;
+
+        [dir="rtl"] & {
+          margin: 0 0 0 10px;
+        }
+      }
+    }
+  }
+}
