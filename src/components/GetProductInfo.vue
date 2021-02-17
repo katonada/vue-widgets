@@ -37,7 +37,7 @@ export default {
         getProduct () {
             axios
             // .get(process.env.VUE_APP_GET + this.productType + '/' + this.productId, {
-                .get('/bundle.json', {
+                .get('api/bundle.json', {
                     headers: {
                         'Accept-Language': this.language
                     }

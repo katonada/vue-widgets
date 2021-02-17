@@ -45,7 +45,7 @@ import BundleView from './components/BundleView.vue';
 import BundleMasksView from './components/BundleMasksView.vue';
 import Tabs from './components/Tabs.vue';
 
-console.clear();
+// console.clear();
 
 export default {
     name: 'App',
