@@ -1,31 +1,31 @@
 <template>
-  <div>
-    <figure v-if="badges.badge.discount_badge" class="ecom__slider-discount">
-      <figcaption>-{{ badges.badge.discount_badge.promo_percentage }}%</figcaption>
-    </figure>
-    <figure v-if="badges.badge.promo_badge" class="ecom__slider-promo">
-      <img :src="badges.badge.promo_badge" />
-    </figure>
-    <figure v-else-if="badges.badge.award_badge && !badges.badge.promo_badge" class="ecom__slider-award">
-      <img :src="badges.badge.award_badge" />
-    </figure>
-  </div>
+    <div>
+        <figure v-if="badges.badge.discount_badge" class="ecom__slider-discount">
+            <figcaption>-{{ badges.badge.discount_badge.promo_percentage }}%</figcaption>
+        </figure>
+        <figure v-if="badges.badge.promo_badge" class="ecom__slider-promo">
+            <img :src="badges.badge.promo_badge">
+        </figure>
+        <figure v-else-if="badges.badge.award_badge && !badges.badge.promo_badge" class="ecom__slider-award">
+            <img :src="badges.badge.award_badge">
+        </figure>
+    </div>
 </template>
 
 <script>
 export default {
-  name: "Badges",
-  props: {
-    badges: {
-      type: Object,
+    name: 'Badges',
+    props: {
+        badges: {
+            type: Object,
+        }
+    },
+    data () {
+        return {
+        };
+    },
+    methods: {
     }
-  },
-  data() {
-    return {
-    }
-  },
-  methods: {
-  }
 };
 </script>
 

@@ -1,16 +1,16 @@
 module.exports = {
-  productionSourceMap: false,
-  publicPath: '',
-  configureWebpack: {
-    optimization: {
-      splitChunks: false
+    productionSourceMap: false,
+    publicPath: '',
+    configureWebpack: {
+        optimization: {
+            splitChunks: false
+        },
+        output: {
+            filename: '[name].js',
+            chunkFilename: '[name].js'
+        }
     },
-    output: {
-      filename: '[name].js',
-      chunkFilename: '[name].js'
+    css: {
+        extract: false,
     }
-  },
-  css: {
-    extract: false,
-  }
-}
+};
