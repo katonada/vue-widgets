@@ -17,7 +17,7 @@ export default {
             view: ''
         };
     },
-    beforeMount () {
+    created () {
     // Get instance id from DOM.
     // this.instanceId = this.$parent.$parent.$options.el.id
     // Get product ID from drupal settings.
@@ -33,6 +33,7 @@ export default {
         this.getProduct();
     },
     methods: {
+
         getProduct () {
             axios
             // .get(process.env.VUE_APP_GET + this.productType + '/' + this.productId, {
@@ -44,15 +45,20 @@ export default {
                 .then(response => { this.emitProductInfo(response.data.data); })
                 .catch(error => { console.log(error); });
         },
+
         emitProductInfo (ProductArray) {
             console.log(ProductArray.type);
             if (ProductArray.type === 'product') {
                 this.view = 'Product';
             } else {
-                ProductArray.attributes[0].bundle === 'default' ? this.view = 'Bundle' : this.view = 'BundleMasks';
+                // ProductArray.attributes[0].bundle === 'default' ? this.view = 'Bundle' : this.view = 'BundleMasks';
+                this.view = (ProductArray.attributes[0].bundle === 'default') ? 'Bundle' : 'BundleMasks';
             }
-            this.$emit('ProductResponse', {
-                ProductArray: ProductArray.attributes, view: this.view, instanceId: this.instanceId, blockViewMode: this.blockViewMode
+            this.$emit('product-response', { // must be kebab-case like components
+                ProductArray: ProductArray.attributes,
+                view: this.view,
+                instanceId: this.instanceId,
+                blockViewMode: this.blockViewMode
             });
         }
     }
