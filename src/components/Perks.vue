@@ -18,6 +18,7 @@ export default {
     props: {
         variation: {
             type: Object,
+            default: () => {}
         }
     },
     data () {

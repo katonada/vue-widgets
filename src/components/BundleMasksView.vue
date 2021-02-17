@@ -54,7 +54,7 @@
                         :product="product"
                         :active-variation="activeVariation"
                         :type="'bundle'"
-                        :active-bundle-total-price="this.activeBundleTotalPrice"
+                        :active-bundle-total-price="activeBundleTotalPrice"
                         class="ecom__atc"
                     />
 
@@ -113,10 +113,12 @@ export default {
     },
     props: {
         product: {
-            type: Object
+            type: Object,
+            default: () => {}
         },
         instance: {
-            type: String
+            type: String,
+            default: ''
         }
     },
     data () {

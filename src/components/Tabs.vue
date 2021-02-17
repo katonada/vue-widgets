@@ -61,12 +61,15 @@ export default {
     props: {
         productArray: {
             type: Array,
+            default: () => []
         },
         productDisplay: {
-            type: String
+            type: String,
+            default: () => ''
         },
         instanceId: {
-            type: String
+            type: String,
+            default: () => ''
         }
     },
     data () {

@@ -3,7 +3,7 @@
         <!-- BEGIN PRICE -->
         <div class="ecom__price">
             <!-- BEGIN BUNDLE PRICE -->
-            <template v-if="this.bundleType === 'default'">
+            <template v-if="bundleType === 'default'">
                 <div class="ecom__price-multi">
                     <div class="ecom__price-discounted">
                         {{ bundleFinalPrice }}
@@ -20,7 +20,7 @@
             <!-- END BUNDLE PRICE -->
 
             <!-- BEGIN MASKS PRICE -->
-            <template v-else-if="this.bundleType === 'masks'">
+            <template v-else-if="bundleType === 'masks'">
                 <div
                     v-if="
                         product.variations[activeVariation].price.original.formatted.number !==
@@ -158,22 +158,28 @@ export default {
     name: 'AddToCart',
     props: {
         product: {
-            type: Object
+            type: Object,
+            default: () => {}
         },
         type: {
-            type: String
+            type: String,
+            default: ''
         },
         activeVariation: {
-            type: Number
+            type: Number,
+            default: null
         },
         activeCombination: {
-            type: Array
+            type: Array,
+            default: () => []
         },
         bundlePrice: {
-            type: Number
+            type: Number,
+            default: null
         },
         activeBundleTotalPrice: {
-            type: Array
+            type: Array,
+            default: () => []
         }
     },
     data () {
@@ -321,7 +327,7 @@ export default {
                     this.adToCart(response.data.data.attributes);
                 })
                 .catch(error => {
-                    alert(error);
+                    console.log(error);
                 });
         },
         adToCart (token) {
@@ -365,4 +371,3 @@ export default {
 </script>
 
 <style lang="scss" src="../scss/addtocart.scss"></style>
-

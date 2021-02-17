@@ -35,12 +35,15 @@ export default {
     props: {
         product: {
             type: Object,
+            default: () => {}
         },
         activeVariation: {
-            type: Number
+            type: Number,
+            default: null
         },
         instance: {
-            type: String
+            type: String,
+            default: ''
         },
     },
     data () {

@@ -92,8 +92,8 @@
                         :product="product"
                         :active-variation="activeVariation"
                         :type="'bundle'"
-                        :bundle-price="this.activePrices.reduce((a, b) => a + b)"
-                        :active-combination="this.activeCombination"
+                        :bundle-price="activePrices.reduce((a, b) => a + b)"
+                        :active-combination="activeCombination"
                         class="ecom__atc"
                     />
 
@@ -152,10 +152,12 @@ export default {
     },
     props: {
         product: {
-            type: Object
+            type: Object,
+            default: () => {}
         },
         instance: {
-            type: String
+            type: String,
+            default: ''
         }
     },
     data () {
@@ -192,7 +194,7 @@ export default {
             this.activeImages = [];
             this.product.variations[this.activeVariation].images.forEach(image => {
                 const difference = image.product_combo.filter(x => !this.activeCombination.includes(x));
-                if (difference.length == 0) this.activeImages.push(image);
+                if (difference.length === 0) this.activeImages.push(image);
             });
 
             // In case of content fail prevent slider link breaking

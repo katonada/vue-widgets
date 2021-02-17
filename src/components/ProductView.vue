@@ -117,13 +117,16 @@ export default {
     },
     props: {
         product: {
-            type: Object
+            type: Object,
+            default: () => {}
         },
         instance: {
-            type: String
+            type: String,
+            default: ''
         },
         blockViewMode: {
-            type: String
+            type: String,
+            default: ''
         }
     },
     data () {

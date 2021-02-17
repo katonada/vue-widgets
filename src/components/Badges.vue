@@ -18,6 +18,7 @@ export default {
     props: {
         badges: {
             type: Object,
+            default: () => {}
         }
     },
     data () {
