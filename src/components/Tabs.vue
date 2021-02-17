@@ -23,19 +23,19 @@
                 :class="{ active: currentTab === key }"
                 :data-product="productArray[key].id"
             >
-                <ProductView
+                <product-view
                     v-if="productDisplay === 'Product'"
                     :product="singleProduct"
                     :instance="instanceId"
                     class="ecom ecom--product"
                 />
-                <BundleView
+                <bundle-view
                     v-if="productDisplay === 'Bundle'"
                     :product="singleProduct"
                     :instance="instanceId"
                     class="ecom ecom--bundle"
                 />
-                <BundleMasksView
+                <bundle-masks-view
                     v-if="productDisplay === 'BundleMasks'"
                     :product="singleProduct"
                     :instance="instanceId"
