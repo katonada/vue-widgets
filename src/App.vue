@@ -1,9 +1,9 @@
 <template>
-  <div id="app">
-    <GetProductInfo @ProductResponse="solveProductResponse" />
+  <div>
+    <get-product-info @ProductResponse="solveProductResponse" />
 
     <!-- BEGIN MULTIPLE ITEMS (TABS) RENDER -->
-    <Tabs
+    <tabs
       v-if="productArray.length > 1"
       :productArray="productArray"
       :productDisplay="productDisplay"
@@ -14,20 +14,20 @@
 
     <!-- BEGIN SINGLE ITEM RENDER -->
     <template v-else>
-      <ProductView
+      <product-view
         v-if="productDisplay === 'Product'"
         :product="productArray[0]"
         :instance="instanceId"
         :blockViewMode='blockViewMode'
         :class="'ecom ecom--product ecom--' + blockViewMode"
       />
-      <BundleView
+      <bundle-view
         v-if="productDisplay === 'Bundle'"
         :product="productArray[0]"
         :instance="instanceId"
         class="ecom ecom--bundle"
       />
-      <BundleMasksView
+      <bundle-masks-view
         v-if="productDisplay === 'BundleMasks'"
         :product="productArray[0]"
         :instance="instanceId"
