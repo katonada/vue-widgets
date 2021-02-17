@@ -266,6 +266,7 @@ export default {
             }
         },
         setBundleVariationsRefOptions () {
+
             if (this.bundleType === 'default') {
                 let counter = 0;
                 this.post.data.bundleVariationsRefOptions = {};

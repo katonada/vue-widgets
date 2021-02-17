@@ -3,19 +3,19 @@
         <div :class="'ecom__wrap ecom__wrap--' + product.bundle">
             <div class="ecom__container">
                 <div class="ecom__media">
-                    <Loader class="ecom__images-loader" />
+                    <loader class="ecom__images-loader" />
                     <div
                         v-for="(variation, key, index) in product.variations"
                         :key="index"
                         class="ecom__images"
                         :data-variation="variation.id"
                     >
-                        <Slider v-show="variation.images && key == activeVariation" :images="variation.images" class="ecom__slider" />
+                        <slider v-show="variation.images && key == activeVariation" :images="variation.images" class="ecom__slider" />
                     </div>
                 </div>
 
                 <div class="ecom__data">
-                    <Info :product="product" :active-variation="activeVariation" class="ecom__info" />
+                    <info :product="product" :active-variation="activeVariation" class="ecom__info" />
 
                     <div v-if="product.variations" class="ecom__switcher">
                         <h3 class="ecom__switcher-title">
@@ -44,13 +44,13 @@
                         </div>
                     </div>
 
-                    <DeliveryEstimate
+                    <delivery-estimate
                         v-if="product.delivery_estimation.text"
                         :estimation="product.delivery_estimation"
                         class="ecom__delivery"
                     />
 
-                    <AddToCart
+                    <add-to-cart
                         :product="product"
                         :active-variation="activeVariation"
                         :type="'bundle'"
@@ -60,7 +60,7 @@
 
                     <div v-if="product.variations[activeVariation].special_notice" class="ecom__special-notes-wrap">
                         <div class="ecom__special-notes ecom__special-notes--variation">
-                            <SpecialNotice
+                            <special-notice
                                 v-if="product.variations[activeVariation].special_notice"
                                 :variation="product.variations[activeVariation]"
                             />
@@ -80,7 +80,7 @@
                         </div>
                     </div>
 
-                    <Perks
+                    <perks
                         v-if="product.variations[activeVariation].perks"
                         :variation="product.variations[activeVariation]"
                         class="ecom__perks"

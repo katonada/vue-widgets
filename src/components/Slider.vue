@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- BEGIN VERTICAL SLIDER -->
-        <VueSlickCarousel
+        <vue-slick-carousel
             v-bind="sliderVerticalSettings"
             ref="sliderVertical"
             :as-nav-for="sliderMain"
@@ -13,11 +13,11 @@
                     <img :src="image.url" :alt="image.alt">
                 </figure>
             </div>
-        </VueSlickCarousel>
+        </vue-slick-carousel>
         <!-- END VERTICAL SLIDER -->
 
         <!-- BEGIN MAIN SLIDER -->
-        <VueSlickCarousel
+        <vue-slick-carousel
             v-if="images.length"
             v-bind="sliderMainSettings"
             ref="sliderMain"
@@ -30,7 +30,7 @@
                 </figure>
                 <Badges :badges="image" class="ecom__slider-badges" />
             </div>
-        </VueSlickCarousel>
+        </vue-slick-carousel>
     <!-- END MAIN SLIDER -->
     </div>
 </template>
