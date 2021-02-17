@@ -237,15 +237,16 @@ export default {
     methods: {
         checkInitialData () {
             /*
-      if (this.type === 'bundle' && this.product.bundle === 'default') {
-        this.post.data.type = 'product_bundle'
-        this.bundleType = 'default'
-      } else if (this.type === 'bundle' && this.product.bundle === 'masks') {
-        this.post.data.type = 'product_bundle'
-        this.bundleType = 'masks'
-      } else if (this.type === 'product') {
-        this.post.data.type = 'product'
-      } */
+            if (this.type === 'bundle' && this.product.bundle === 'default') {
+                this.post.data.type = 'product_bundle'
+                this.bundleType = 'default'
+            } else if (this.type === 'bundle' && this.product.bundle === 'masks') {
+                this.post.data.type = 'product_bundle'
+                this.bundleType = 'masks'
+            } else if (this.type === 'product') {
+                this.post.data.type = 'product'
+            }
+            */
         },
         calculateBundlePrice () {
             if (this.product.variations[this.$props.activeVariation].price.discounted.formatted) {
