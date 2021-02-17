@@ -1,1 +1,445 @@
-{"data":{"type":"bundle","is_multiple":false,"attributes":[{"id":1002,"bundle":"masks","title":"Wake Me Up Before You Glow Glow","subtitle":"","description":"Start your morning with a hydrating Make My Day 90-second mask, relax after dinner with a soothing Call It a Night treatment and whenever the day seems to dull your cheeks, brighten them up - and keep them that way - in under two minutes, with Glow Addict.\u003Cbr \/\u003E\u003Cbr\u003E\u003Cbr \/\u003E\u003Cbr\u003E- 14 x\u00a0Make My Day\u003Cbr \/\u003E\u003Cbr\u003E- 14 x\u00a0Call it a Night\u003Cbr \/\u003E\u003Cbr\u003E- 6 x\u00a0Glow Addict","availableAt":null,"worksWith":[{"title":"UFO 2 \u0026 UFO","icon_color":null},{"title":"UFO mini 2 \u0026 UFO mini","icon_color":null}],"specialTag":null,"special_notice":null,"delivery_estimation":{"date":"19 Feb 2021","country_name":"United Kingdom","text":"Expected delivery date for"},"variations":[{"id":10,"title":"1 set","properties":[{"identifier":"59__0","id":"59","title":"Make My Day Mask","quantity":"2","variation_switcher_text":"Choose color","variations":[{"id":"1544","type":"mask","properties":{"id":"color","color":"#BDE8F8","label":"Make My Day Mask x7"},"price":{"currency":"GBP","original":{"number":"9.990000","formatted":"\u00a3 9.99","symbol":"\u00a3 ","position":0}}}]},{"identifier":"60__1","id":"60","title":"Call It a Night Mask","quantity":"2","variation_switcher_text":"Choose color","variations":[{"id":"1545","type":"mask","properties":{"id":"color","color":"#372954","label":"Call It a Night Mask x7"},"price":{"currency":"GBP","original":{"number":"9.990000","formatted":"\u00a3 9.99","symbol":"\u00a3 ","position":0}}}]},{"identifier":"65__2","id":"65","title":"Glow Addict Mask","quantity":"1","variation_switcher_text":"Choose color","variations":[{"id":"1560","type":"mask","properties":{"id":"color","color":"#FCCBE9","label":"Glow Addict Mask x6"},"price":{"currency":"GBP","original":{"number":"18.990000","formatted":"\u00a3 18.99","symbol":"\u00a3 ","position":0}}}]}],"price":{"currency":"GBP","original":{"number":"49.99","formatted":"\u00a3 49.99","symbol":"\u00a3 ","position":0},"discounted":{"formatted":null,"savings":{"number":null,"formatted":null,"text":null}},"installments":{"type":"clearpay","properties":{"libraries":{"afterpay":"https:\/\/static-us.afterpay.com\/javascript\/present-afterpay.js","clearpay":"https:\/\/js.afterpay.com\/afterpay-1.x.js"},"conf":{"priceSelector":".afterpay__installments","amount":4999,"locale":"en_GB","currency":"GBP","minMaxThreshold":{"min":3500,"max":100000},"showUpperLimit":false},"clearpay_additional":{"afterpay_placement":{"data_locale":"en_GB","data_currency":"GBP","data_amount":49.99}}}},"dach_vat":null},"images":[{"badge":{"discount_badge":null,"promo_badge":null,"award_badge":null},"url":"https:\/\/assets.foreo.com\/local\/static\/2020-03\/UFOmask_BUNDLE_DullSkin.png?BTFNaHzUfiAtvTvRtTUNmZcDO5F4gUxT","alt":"Wake Me Up Before You Glow Glow"}],"addToCart":{"id":"buy_now","title":"Buy","disabled":false},"contains":"\u003Cb\u003EBundle contains: \u003C\/b\u003E34 UFO activated masks","perks":[],"special_notice":null},{"id":15,"title":"2 sets","properties":[{"identifier":"59__0","id":"59","title":"Make My Day Mask","quantity":"4","variation_switcher_text":"Choose color","variations":[{"id":"1544","type":"mask","properties":{"id":"color","color":"#BDE8F8","label":"Make My Day Mask x7"},"price":{"currency":"GBP","original":{"number":"9.990000","formatted":"\u00a3 9.99","symbol":"\u00a3 ","position":0}}}]},{"identifier":"60__1","id":"60","title":"Call It a Night Mask","quantity":"4","variation_switcher_text":"Choose color","variations":[{"id":"1545","type":"mask","properties":{"id":"color","color":"#372954","label":"Call It a Night Mask x7"},"price":{"currency":"GBP","original":{"number":"9.990000","formatted":"\u00a3 9.99","symbol":"\u00a3 ","position":0}}}]},{"identifier":"65__2","id":"65","title":"Glow Addict Mask","quantity":"2","variation_switcher_text":"Choose color","variations":[{"id":"1560","type":"mask","properties":{"id":"color","color":"#FCCBE9","label":"Glow Addict Mask x6"},"price":{"currency":"GBP","original":{"number":"18.990000","formatted":"\u00a3 18.99","symbol":"\u00a3 ","position":0}}}]}],"price":{"currency":"GBP","original":{"number":"87.99","formatted":"\u00a3 87.99","symbol":"\u00a3 ","position":0},"discounted":{"formatted":null,"savings":{"number":null,"formatted":null,"text":null}},"installments":{"type":"clearpay","properties":{"libraries":{"afterpay":"https:\/\/static-us.afterpay.com\/javascript\/present-afterpay.js","clearpay":"https:\/\/js.afterpay.com\/afterpay-1.x.js"},"conf":{"priceSelector":".afterpay__installments","amount":8799,"locale":"en_GB","currency":"GBP","minMaxThreshold":{"min":3500,"max":100000},"showUpperLimit":false},"clearpay_additional":{"afterpay_placement":{"data_locale":"en_GB","data_currency":"GBP","data_amount":87.99}}}},"dach_vat":null},"images":[{"badge":{"discount_badge":null,"promo_badge":null,"award_badge":null},"url":"https:\/\/assets.foreo.com\/local\/static\/2020-03\/UFOmask_BUNDLE_DullSkin.png?BTFNaHzUfiAtvTvRtTUNmZcDO5F4gUxT","alt":"Wake Me Up Before You Glow Glow"}],"addToCart":{"id":"buy_now","title":"Buy","disabled":false},"contains":"\u003Cb\u003EBundle contains: \u003C\/b\u003E68 UFO activated masks","perks":[],"special_notice":null},{"id":16,"title":"3 sets","properties":[{"identifier":"59__0","id":"59","title":"Make My Day Mask","quantity":"6","variation_switcher_text":"Choose color","variations":[{"id":"1544","type":"mask","properties":{"id":"color","color":"#BDE8F8","label":"Make My Day Mask x7"},"price":{"currency":"GBP","original":{"number":"9.990000","formatted":"\u00a3 9.99","symbol":"\u00a3 ","position":0}}}]},{"identifier":"60__1","id":"60","title":"Call It a Night Mask","quantity":"6","variation_switcher_text":"Choose color","variations":[{"id":"1545","type":"mask","properties":{"id":"color","color":"#372954","label":"Call It a Night Mask x7"},"price":{"currency":"GBP","original":{"number":"9.990000","formatted":"\u00a3 9.99","symbol":"\u00a3 ","position":0}}}]},{"identifier":"65__2","id":"65","title":"Glow Addict Mask","quantity":"3","variation_switcher_text":"Choose color","variations":[{"id":"1560","type":"mask","properties":{"id":"color","color":"#FCCBE9","label":"Glow Addict Mask x6"},"price":{"currency":"GBP","original":{"number":"18.990000","formatted":"\u00a3 18.99","symbol":"\u00a3 ","position":0}}}]}],"price":{"currency":"GBP","original":{"number":"96.99","formatted":"\u00a3 96.99","symbol":"\u00a3 ","position":0},"discounted":{"formatted":null,"savings":{"number":null,"formatted":null,"text":null}},"installments":{"type":"clearpay","properties":{"libraries":{"afterpay":"https:\/\/static-us.afterpay.com\/javascript\/present-afterpay.js","clearpay":"https:\/\/js.afterpay.com\/afterpay-1.x.js"},"conf":{"priceSelector":".afterpay__installments","amount":9699,"locale":"en_GB","currency":"GBP","minMaxThreshold":{"min":3500,"max":100000},"showUpperLimit":false},"clearpay_additional":{"afterpay_placement":{"data_locale":"en_GB","data_currency":"GBP","data_amount":96.99}}}},"dach_vat":null},"images":[{"badge":{"discount_badge":null,"promo_badge":null,"award_badge":null},"url":"https:\/\/assets.foreo.com\/local\/static\/2020-03\/UFOmask_BUNDLE_DullSkin.png?BTFNaHzUfiAtvTvRtTUNmZcDO5F4gUxT","alt":"Wake Me Up Before You Glow Glow"}],"addToCart":{"id":"buy_now","title":"Buy","disabled":false},"contains":"\u003Cb\u003EBundle contains: \u003C\/b\u003E102 UFO activated masks","perks":[],"special_notice":null}],"variation_switcher_text":"Choose bundle","render_type":"mix"}]}}
+{
+    "data": {
+        "type": "bundle",
+        "is_multiple": false,
+        "attributes": [{
+            "id": 1002,
+            "bundle": "masks",
+            "title": "Wake Me Up Before You Glow Glow",
+            "subtitle": "",
+            "description": "Start your morning with a hydrating Make My Day 90-second mask, relax after dinner with a soothing Call It a Night treatment and whenever the day seems to dull your cheeks, brighten them up - and keep them that way - in under two minutes, with Glow Addict.\u003Cbr \/\u003E\u003Cbr\u003E\u003Cbr \/\u003E\u003Cbr\u003E- 14 x\u00a0Make My Day\u003Cbr \/\u003E\u003Cbr\u003E- 14 x\u00a0Call it a Night\u003Cbr \/\u003E\u003Cbr\u003E- 6 x\u00a0Glow Addict",
+            "availableAt": null,
+            "worksWith": [{
+                "title": "UFO 2 \u0026 UFO",
+                "icon_color": null
+            }, {
+                "title": "UFO mini 2 \u0026 UFO mini",
+                "icon_color": null
+            }],
+            "specialTag": null,
+            "special_notice": null,
+            "delivery_estimation": {
+                "date": "19 Feb 2021",
+                "country_name": "United Kingdom",
+                "text": "Expected delivery date for"
+            },
+            "variations": [{
+                "id": 10,
+                "title": "1 set",
+                "properties": [{
+                    "identifier": "59__0",
+                    "id": "59",
+                    "title": "Make My Day Mask",
+                    "quantity": "2",
+                    "variation_switcher_text": "Choose color",
+                    "variations": [{
+                        "id": "1544",
+                        "type": "mask",
+                        "properties": {
+                            "id": "color",
+                            "color": "#BDE8F8",
+                            "label": "Make My Day Mask x7"
+                        },
+                        "price": {
+                            "currency": "GBP",
+                            "original": {
+                                "number": "9.990000",
+                                "formatted": "\u00a3 9.99",
+                                "symbol": "\u00a3 ",
+                                "position": 0
+                            }
+                        }
+                    }]
+                }, {
+                    "identifier": "60__1",
+                    "id": "60",
+                    "title": "Call It a Night Mask",
+                    "quantity": "2",
+                    "variation_switcher_text": "Choose color",
+                    "variations": [{
+                        "id": "1545",
+                        "type": "mask",
+                        "properties": {
+                            "id": "color",
+                            "color": "#372954",
+                            "label": "Call It a Night Mask x7"
+                        },
+                        "price": {
+                            "currency": "GBP",
+                            "original": {
+                                "number": "9.990000",
+                                "formatted": "\u00a3 9.99",
+                                "symbol": "\u00a3 ",
+                                "position": 0
+                            }
+                        }
+                    }]
+                }, {
+                    "identifier": "65__2",
+                    "id": "65",
+                    "title": "Glow Addict Mask",
+                    "quantity": "1",
+                    "variation_switcher_text": "Choose color",
+                    "variations": [{
+                        "id": "1560",
+                        "type": "mask",
+                        "properties": {
+                            "id": "color",
+                            "color": "#FCCBE9",
+                            "label": "Glow Addict Mask x6"
+                        },
+                        "price": {
+                            "currency": "GBP",
+                            "original": {
+                                "number": "18.990000",
+                                "formatted": "\u00a3 18.99",
+                                "symbol": "\u00a3 ",
+                                "position": 0
+                            }
+                        }
+                    }]
+                }],
+                "price": {
+                    "currency": "GBP",
+                    "original": {
+                        "number": "49.99",
+                        "formatted": "\u00a3 49.99",
+                        "symbol": "\u00a3 ",
+                        "position": 0
+                    },
+                    "discounted": {
+                        "formatted": null,
+                        "savings": {
+                            "number": null,
+                            "formatted": null,
+                            "text": null
+                        }
+                    },
+                    "installments": {
+                        "type": "clearpay",
+                        "properties": {
+                            "libraries": {
+                                "afterpay": "https:\/\/static-us.afterpay.com\/javascript\/present-afterpay.js",
+                                "clearpay": "https:\/\/js.afterpay.com\/afterpay-1.x.js"
+                            },
+                            "conf": {
+                                "priceSelector": ".afterpay__installments",
+                                "amount": 4999,
+                                "locale": "en_GB",
+                                "currency": "GBP",
+                                "minMaxThreshold": {
+                                    "min": 3500,
+                                    "max": 100000
+                                },
+                                "showUpperLimit": false
+                            },
+                            "clearpay_additional": {
+                                "afterpay_placement": {
+                                    "data_locale": "en_GB",
+                                    "data_currency": "GBP",
+                                    "data_amount": 49.99
+                                }
+                            }
+                        }
+                    },
+                    "dach_vat": null
+                },
+                "images": [{
+                    "badge": {
+                        "discount_badge": null,
+                        "promo_badge": null,
+                        "award_badge": null
+                    },
+                    "url": "https:\/\/assets.foreo.com\/local\/static\/2020-03\/UFOmask_BUNDLE_DullSkin.png?BTFNaHzUfiAtvTvRtTUNmZcDO5F4gUxT",
+                    "alt": "Wake Me Up Before You Glow Glow"
+                }],
+                "addToCart": {
+                    "id": "buy_now",
+                    "title": "Buy",
+                    "disabled": false
+                },
+                "contains": "\u003Cb\u003EBundle contains: \u003C\/b\u003E34 UFO activated masks",
+                "perks": [],
+                "special_notice": null
+            }, {
+                "id": 15,
+                "title": "2 sets",
+                "properties": [{
+                    "identifier": "59__0",
+                    "id": "59",
+                    "title": "Make My Day Mask",
+                    "quantity": "4",
+                    "variation_switcher_text": "Choose color",
+                    "variations": [{
+                        "id": "1544",
+                        "type": "mask",
+                        "properties": {
+                            "id": "color",
+                            "color": "#BDE8F8",
+                            "label": "Make My Day Mask x7"
+                        },
+                        "price": {
+                            "currency": "GBP",
+                            "original": {
+                                "number": "9.990000",
+                                "formatted": "\u00a3 9.99",
+                                "symbol": "\u00a3 ",
+                                "position": 0
+                            }
+                        }
+                    }]
+                }, {
+                    "identifier": "60__1",
+                    "id": "60",
+                    "title": "Call It a Night Mask",
+                    "quantity": "4",
+                    "variation_switcher_text": "Choose color",
+                    "variations": [{
+                        "id": "1545",
+                        "type": "mask",
+                        "properties": {
+                            "id": "color",
+                            "color": "#372954",
+                            "label": "Call It a Night Mask x7"
+                        },
+                        "price": {
+                            "currency": "GBP",
+                            "original": {
+                                "number": "9.990000",
+                                "formatted": "\u00a3 9.99",
+                                "symbol": "\u00a3 ",
+                                "position": 0
+                            }
+                        }
+                    }]
+                }, {
+                    "identifier": "65__2",
+                    "id": "65",
+                    "title": "Glow Addict Mask",
+                    "quantity": "2",
+                    "variation_switcher_text": "Choose color",
+                    "variations": [{
+                        "id": "1560",
+                        "type": "mask",
+                        "properties": {
+                            "id": "color",
+                            "color": "#FCCBE9",
+                            "label": "Glow Addict Mask x6"
+                        },
+                        "price": {
+                            "currency": "GBP",
+                            "original": {
+                                "number": "18.990000",
+                                "formatted": "\u00a3 18.99",
+                                "symbol": "\u00a3 ",
+                                "position": 0
+                            }
+                        }
+                    }]
+                }],
+                "price": {
+                    "currency": "GBP",
+                    "original": {
+                        "number": "87.99",
+                        "formatted": "\u00a3 87.99",
+                        "symbol": "\u00a3 ",
+                        "position": 0
+                    },
+                    "discounted": {
+                        "formatted": null,
+                        "savings": {
+                            "number": null,
+                            "formatted": null,
+                            "text": null
+                        }
+                    },
+                    "installments": {
+                        "type": "clearpay",
+                        "properties": {
+                            "libraries": {
+                                "afterpay": "https:\/\/static-us.afterpay.com\/javascript\/present-afterpay.js",
+                                "clearpay": "https:\/\/js.afterpay.com\/afterpay-1.x.js"
+                            },
+                            "conf": {
+                                "priceSelector": ".afterpay__installments",
+                                "amount": 8799,
+                                "locale": "en_GB",
+                                "currency": "GBP",
+                                "minMaxThreshold": {
+                                    "min": 3500,
+                                    "max": 100000
+                                },
+                                "showUpperLimit": false
+                            },
+                            "clearpay_additional": {
+                                "afterpay_placement": {
+                                    "data_locale": "en_GB",
+                                    "data_currency": "GBP",
+                                    "data_amount": 87.99
+                                }
+                            }
+                        }
+                    },
+                    "dach_vat": null
+                },
+                "images": [{
+                    "badge": {
+                        "discount_badge": null,
+                        "promo_badge": null,
+                        "award_badge": null
+                    },
+                    "url": "https:\/\/assets.foreo.com\/local\/static\/2020-03\/UFOmask_BUNDLE_DullSkin.png?BTFNaHzUfiAtvTvRtTUNmZcDO5F4gUxT",
+                    "alt": "Wake Me Up Before You Glow Glow"
+                }],
+                "addToCart": {
+                    "id": "buy_now",
+                    "title": "Buy",
+                    "disabled": false
+                },
+                "contains": "\u003Cb\u003EBundle contains: \u003C\/b\u003E68 UFO activated masks",
+                "perks": [],
+                "special_notice": null
+            }, {
+                "id": 16,
+                "title": "3 sets",
+                "properties": [{
+                    "identifier": "59__0",
+                    "id": "59",
+                    "title": "Make My Day Mask",
+                    "quantity": "6",
+                    "variation_switcher_text": "Choose color",
+                    "variations": [{
+                        "id": "1544",
+                        "type": "mask",
+                        "properties": {
+                            "id": "color",
+                            "color": "#BDE8F8",
+                            "label": "Make My Day Mask x7"
+                        },
+                        "price": {
+                            "currency": "GBP",
+                            "original": {
+                                "number": "9.990000",
+                                "formatted": "\u00a3 9.99",
+                                "symbol": "\u00a3 ",
+                                "position": 0
+                            }
+                        }
+                    }]
+                }, {
+                    "identifier": "60__1",
+                    "id": "60",
+                    "title": "Call It a Night Mask",
+                    "quantity": "6",
+                    "variation_switcher_text": "Choose color",
+                    "variations": [{
+                        "id": "1545",
+                        "type": "mask",
+                        "properties": {
+                            "id": "color",
+                            "color": "#372954",
+                            "label": "Call It a Night Mask x7"
+                        },
+                        "price": {
+                            "currency": "GBP",
+                            "original": {
+                                "number": "9.990000",
+                                "formatted": "\u00a3 9.99",
+                                "symbol": "\u00a3 ",
+                                "position": 0
+                            }
+                        }
+                    }]
+                }, {
+                    "identifier": "65__2",
+                    "id": "65",
+                    "title": "Glow Addict Mask",
+                    "quantity": "3",
+                    "variation_switcher_text": "Choose color",
+                    "variations": [{
+                        "id": "1560",
+                        "type": "mask",
+                        "properties": {
+                            "id": "color",
+                            "color": "#FCCBE9",
+                            "label": "Glow Addict Mask x6"
+                        },
+                        "price": {
+                            "currency": "GBP",
+                            "original": {
+                                "number": "18.990000",
+                                "formatted": "\u00a3 18.99",
+                                "symbol": "\u00a3 ",
+                                "position": 0
+                            }
+                        }
+                    }]
+                }],
+                "price": {
+                    "currency": "GBP",
+                    "original": {
+                        "number": "96.99",
+                        "formatted": "\u00a3 96.99",
+                        "symbol": "\u00a3 ",
+                        "position": 0
+                    },
+                    "discounted": {
+                        "formatted": null,
+                        "savings": {
+                            "number": null,
+                            "formatted": null,
+                            "text": null
+                        }
+                    },
+                    "installments": {
+                        "type": "clearpay",
+                        "properties": {
+                            "libraries": {
+                                "afterpay": "https:\/\/static-us.afterpay.com\/javascript\/present-afterpay.js",
+                                "clearpay": "https:\/\/js.afterpay.com\/afterpay-1.x.js"
+                            },
+                            "conf": {
+                                "priceSelector": ".afterpay__installments",
+                                "amount": 9699,
+                                "locale": "en_GB",
+                                "currency": "GBP",
+                                "minMaxThreshold": {
+                                    "min": 3500,
+                                    "max": 100000
+                                },
+                                "showUpperLimit": false
+                            },
+                            "clearpay_additional": {
+                                "afterpay_placement": {
+                                    "data_locale": "en_GB",
+                                    "data_currency": "GBP",
+                                    "data_amount": 96.99
+                                }
+                            }
+                        }
+                    },
+                    "dach_vat": null
+                },
+                "images": [{
+                    "badge": {
+                        "discount_badge": null,
+                        "promo_badge": null,
+                        "award_badge": null
+                    },
+                    "url": "https:\/\/assets.foreo.com\/local\/static\/2020-03\/UFOmask_BUNDLE_DullSkin.png?BTFNaHzUfiAtvTvRtTUNmZcDO5F4gUxT",
+                    "alt": "Wake Me Up Before You Glow Glow"
+                }],
+                "addToCart": {
+                    "id": "buy_now",
+                    "title": "Buy",
+                    "disabled": false
+                },
+                "contains": "\u003Cb\u003EBundle contains: \u003C\/b\u003E102 UFO activated masks",
+                "perks": [],
+                "special_notice": null
+            }],
+            "variation_switcher_text": "Choose bundle",
+            "render_type": "mix"
+        }]
+    }
+}

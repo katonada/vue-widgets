@@ -1,1 +1,417 @@
-{"data":{"type":"product","is_multiple":false,"attributes":[{"id":21,"bundle":"device","title":"LUNA 2","subtitle":"Facial Spa Massager For Cleansing \u0026 Anti-Wrinkle Results","description":"The revolutionary LUNA 2 delivers enhanced T-Sonic\u2122 facial cleansing\u00a0and anti-wrinkle system designed to minimize the appearance of blemishes while effectively addressing concerns related to aging skin. LUNA 2 is now available in four varieties, so you can select the one that is tailored to your skin type.","availableAt":{"title":"Available at the following retailers:","places":[{"title":"Online","image":{"url":"https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-04\/feelunique_0.png?81VIXkwfGfI.qV_p1JIVQ_rzetjNvicE","alt":"AVAILABLE AT - FEELUNIQUE - LUNA 2"},"url":"https:\/\/www.feelunique.com\/p\/FOREO-LUNA-2-for-Normal-Skin"},{"title":"In stores \u0026 online","image":{"url":"https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-05\/harrods_1.png?rXuBH8rw8LMNOt.avIQEhA_TbDf404Z2","alt":"AVAILABLE AT  - HARRODS - LUNA 2"},"url":"https:\/\/www.harrods.com\/en-gb\/foreo\/luna-2-facial-cleansing-brush-for-normal-skin-p000000000005981713"}]},"worksWith":null,"specialTag":null,"special_notice":null,"delivery_estimation":{"date":"19 Feb 2021","country_name":"United Kingdom","text":"Expected delivery date for"},"variations":[{"id":1249,"title":"LUNA 2 Normal skin","properties":{"id":"skin_type","color":"#F1C5DC","label":"Normal skin"},"price":{"currency":"GBP","original":{"number":"149.000000","formatted":"\u00a3 149","symbol":"\u00a3 ","position":0},"discounted":{"formatted":null,"savings":{"number":null,"formatted":null,"text":null}},"installments":{"type":"clearpay","properties":{"libraries":{"afterpay":"https:\/\/static-us.afterpay.com\/javascript\/present-afterpay.js","clearpay":"https:\/\/js.afterpay.com\/afterpay-1.x.js"},"conf":{"priceSelector":".afterpay__installments","amount":14900,"locale":"en_GB","currency":"GBP","minMaxThreshold":{"min":3500,"max":100000},"showUpperLimit":false},"clearpay_additional":{"afterpay_placement":{"data_locale":"en_GB","data_currency":"GBP","data_amount":149}}}},"dach_vat":null},"images":[{"badge":{"discount_badge":null,"promo_badge":null,"award_badge":"https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-02\/LUNA2_ELLEbeautyAwards2019__0.png?6JLTl2.WXk6xtWTJDZzg6sGRHA0q2fjH"},"product_combo":null,"url":"https:\/\/assets.foreo.com\/local\/static\/product-images\/2019-03\/LUNA2-PP-Productimage-Front-Normal%28425x523%29.png?TpywAg3I8BgcdOeLfHKn_FrhEch38IJP","alt":"luna-2-normal-skin"},{"badge":{"discount_badge":null,"promo_badge":null,"award_badge":"https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-02\/LUNA2_ELLEbeautyAwards2019__0.png?6JLTl2.WXk6xtWTJDZzg6sGRHA0q2fjH"},"product_combo":null,"url":"https:\/\/assets.foreo.com\/local\/static\/products\/01-product_BACK_425x523_Normal.png?E0iv0elJaKY75AVTNTdMNXE14XEV2X5D","alt":"luna-2-normal-skin"},{"badge":{"discount_badge":null,"promo_badge":null,"award_badge":"https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-02\/LUNA2_ELLEbeautyAwards2019__0.png?6JLTl2.WXk6xtWTJDZzg6sGRHA0q2fjH"},"product_combo":null,"url":"https:\/\/assets.foreo.com\/local\/static\/products\/LUNA2-PP-Productimage-InBox-Normal%28425x523%29.png?CY7fLSWj_grORvno57cIePnTHYbFZS_p","alt":"luna-2-normal-skin"}],"addToCart":{"id":"buy_now","title":"Buy","disabled":false},"contains":null,"perks":[{"title":"WARRANTY","category":"warranty","icon":"https:\/\/assets.foreo.com\/files\/static\/2019-09\/warranty.svg","description":"2 years"}],"special_notice":null},{"id":1255,"title":"LUNA 2 Combination skin","properties":{"id":"skin_type","color":"#95CEF0","label":"Combination skin"},"price":{"currency":"GBP","original":{"number":"149.000000","formatted":"\u00a3 149","symbol":"\u00a3 ","position":0},"discounted":{"formatted":null,"savings":{"number":null,"formatted":null,"text":null}},"installments":{"type":"clearpay","properties":{"libraries":{"afterpay":"https:\/\/static-us.afterpay.com\/javascript\/present-afterpay.js","clearpay":"https:\/\/js.afterpay.com\/afterpay-1.x.js"},"conf":{"priceSelector":".afterpay__installments","amount":14900,"locale":"en_GB","currency":"GBP","minMaxThreshold":{"min":3500,"max":100000},"showUpperLimit":false},"clearpay_additional":{"afterpay_placement":{"data_locale":"en_GB","data_currency":"GBP","data_amount":149}}}},"dach_vat":null},"images":[{"badge":{"discount_badge":null,"promo_badge":null,"award_badge":"https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-02\/LUNA2_ELLEbeautyAwards2019__0.png?6JLTl2.WXk6xtWTJDZzg6sGRHA0q2fjH"},"product_combo":null,"url":"https:\/\/assets.foreo.com\/local\/static\/product-images\/2020-04\/LUNA2-PP-Productimage-Front-Combination%28425x523%29_.png?9VpgNp5XadPu_Xsf8UNMGRhfDKQ9AtUS","alt":"LUNA 2 combination skin"},{"badge":{"discount_badge":null,"promo_badge":null,"award_badge":"https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-02\/LUNA2_ELLEbeautyAwards2019__0.png?6JLTl2.WXk6xtWTJDZzg6sGRHA0q2fjH"},"product_combo":null,"url":"https:\/\/assets.foreo.com\/local\/static\/products\/01-product_BACK_425x523_Mixed.png?vQZ5we1XZzL3qGyeGYWl.M1nBNf4nIHn","alt":"LUNA 2 combination skin"},{"badge":{"discount_badge":null,"promo_badge":null,"award_badge":"https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-02\/LUNA2_ELLEbeautyAwards2019__0.png?6JLTl2.WXk6xtWTJDZzg6sGRHA0q2fjH"},"product_combo":null,"url":"https:\/\/assets.foreo.com\/local\/static\/products\/LUNA2-PP-Productimage-InBox-Combination%28425x523%29.png?G9gYD_i49M3sD_k3Bi3wV_nWpMQLamlO","alt":"LUNA 2 combination skin"}],"addToCart":{"id":"buy_now","title":"Buy","disabled":false},"contains":null,"perks":[{"title":"WARRANTY","category":"warranty","icon":"https:\/\/assets.foreo.com\/files\/static\/2019-09\/warranty.svg","description":"2 years"}],"special_notice":null},{"id":1252,"title":"LUNA 2 Sensitive skin","properties":{"id":"skin_type","color":"#D8CEF2","label":"Sensitive skin"},"price":{"currency":"GBP","original":{"number":"149.000000","formatted":"\u00a3 149","symbol":"\u00a3 ","position":0},"discounted":{"formatted":null,"savings":{"number":null,"formatted":null,"text":null}},"installments":{"type":"clearpay","properties":{"libraries":{"afterpay":"https:\/\/static-us.afterpay.com\/javascript\/present-afterpay.js","clearpay":"https:\/\/js.afterpay.com\/afterpay-1.x.js"},"conf":{"priceSelector":".afterpay__installments","amount":14900,"locale":"en_GB","currency":"GBP","minMaxThreshold":{"min":3500,"max":100000},"showUpperLimit":false},"clearpay_additional":{"afterpay_placement":{"data_locale":"en_GB","data_currency":"GBP","data_amount":149}}}},"dach_vat":null},"images":[{"badge":{"discount_badge":null,"promo_badge":null,"award_badge":"https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-02\/LUNA2_ELLEbeautyAwards2019__0.png?6JLTl2.WXk6xtWTJDZzg6sGRHA0q2fjH"},"product_combo":null,"url":"https:\/\/assets.foreo.com\/local\/static\/product-images\/2020-04\/LUNA2-PP-Productimage-Front-Sensitive%28425x523%29%20%281%29.png?1_95PyiEr5GsByyl0lt9Si7Ho.d6mVCo","alt":"LUNA 2"},{"badge":{"discount_badge":null,"promo_badge":null,"award_badge":"https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-02\/LUNA2_ELLEbeautyAwards2019__0.png?6JLTl2.WXk6xtWTJDZzg6sGRHA0q2fjH"},"product_combo":null,"url":"https:\/\/assets.foreo.com\/local\/static\/products\/01-product_BACK_425x523_Sensetive.png?SNIegdrUSh82_dkWendwo5H2CLKtWvO6","alt":"LUNA 2"},{"badge":{"discount_badge":null,"promo_badge":null,"award_badge":"https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-02\/LUNA2_ELLEbeautyAwards2019__0.png?6JLTl2.WXk6xtWTJDZzg6sGRHA0q2fjH"},"product_combo":null,"url":"https:\/\/assets.foreo.com\/local\/static\/products\/LUNA2-PP-Productimage-InBox-Sensitive%28425x523%29%20copy.png?NLVNDdgvQx5nUfjFC8X95x2tRUGQPaEo","alt":"LUNA 2"}],"addToCart":{"id":"sold_out","title":"Sold out","disabled":true},"contains":null,"perks":[{"title":"WARRANTY","category":"warranty","icon":"https:\/\/assets.foreo.com\/files\/static\/2019-09\/warranty.svg","description":"2 years"}],"special_notice":null},{"id":1258,"title":"LUNA 2 Oily skin","properties":{"id":"skin_type","color":"#96EBF2","label":"Oily skin"},"price":{"currency":"GBP","original":{"number":"149.000000","formatted":"\u00a3 149","symbol":"\u00a3 ","position":0},"discounted":{"formatted":null,"savings":{"number":null,"formatted":null,"text":null}},"installments":{"type":"clearpay","properties":{"libraries":{"afterpay":"https:\/\/static-us.afterpay.com\/javascript\/present-afterpay.js","clearpay":"https:\/\/js.afterpay.com\/afterpay-1.x.js"},"conf":{"priceSelector":".afterpay__installments","amount":14900,"locale":"en_GB","currency":"GBP","minMaxThreshold":{"min":3500,"max":100000},"showUpperLimit":false},"clearpay_additional":{"afterpay_placement":{"data_locale":"en_GB","data_currency":"GBP","data_amount":149}}}},"dach_vat":null},"images":[{"badge":{"discount_badge":null,"promo_badge":null,"award_badge":"https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-02\/LUNA2_ELLEbeautyAwards2019__0.png?6JLTl2.WXk6xtWTJDZzg6sGRHA0q2fjH"},"product_combo":null,"url":"https:\/\/assets.foreo.com\/local\/static\/product-images\/2020-04\/LUNA2-PP-Productimage-Front-Oily%28425x523%29%20%281%29.png?eYOqhzlZVBaWTpAJ1iPWy1g6yQsM3TBA","alt":"LUNA 2 oily skin"},{"badge":{"discount_badge":null,"promo_badge":null,"award_badge":"https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-02\/LUNA2_ELLEbeautyAwards2019__0.png?6JLTl2.WXk6xtWTJDZzg6sGRHA0q2fjH"},"product_combo":null,"url":"https:\/\/assets.foreo.com\/local\/static\/products\/01-product_BACK_425x523_Oily.png?usuUErbDpCjoTwPy6dDaQk7eNQU50dGo","alt":"LUNA 2 oily skin"},{"badge":{"discount_badge":null,"promo_badge":null,"award_badge":"https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-02\/LUNA2_ELLEbeautyAwards2019__0.png?6JLTl2.WXk6xtWTJDZzg6sGRHA0q2fjH"},"product_combo":null,"url":"https:\/\/assets.foreo.com\/local\/static\/products\/LUNA2-PP-Productimage-InBox-Oily%28425x523%29.png?gJCpuLs8n9E8vynsSvHVJS3kKHdcoDul","alt":"LUNA 2 oily skin"}],"addToCart":{"id":"sold_out","title":"Sold out","disabled":true},"contains":null,"perks":[{"title":"WARRANTY","category":"warranty","icon":"https:\/\/assets.foreo.com\/files\/static\/2019-09\/warranty.svg","description":"2 years"}],"special_notice":null}],"variation_switcher_text":"Choose skin type"}]}}
+{
+    "data": {
+        "type": "product",
+        "is_multiple": false,
+        "attributes": [{
+            "id": 21,
+            "bundle": "device",
+            "title": "LUNA 2",
+            "subtitle": "Facial Spa Massager For Cleansing \u0026 Anti-Wrinkle Results",
+            "description": "The revolutionary LUNA 2 delivers enhanced T-Sonic\u2122 facial cleansing\u00a0and anti-wrinkle system designed to minimize the appearance of blemishes while effectively addressing concerns related to aging skin. LUNA 2 is now available in four varieties, so you can select the one that is tailored to your skin type.",
+            "availableAt": {
+                "title": "Available at the following retailers:",
+                "places": [{
+                    "title": "Online",
+                    "image": {
+                        "url": "https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-04\/feelunique_0.png?81VIXkwfGfI.qV_p1JIVQ_rzetjNvicE",
+                        "alt": "AVAILABLE AT - FEELUNIQUE - LUNA 2"
+                    },
+                    "url": "https:\/\/www.feelunique.com\/p\/FOREO-LUNA-2-for-Normal-Skin"
+                }, {
+                    "title": "In stores \u0026 online",
+                    "image": {
+                        "url": "https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-05\/harrods_1.png?rXuBH8rw8LMNOt.avIQEhA_TbDf404Z2",
+                        "alt": "AVAILABLE AT  - HARRODS - LUNA 2"
+                    },
+                    "url": "https:\/\/www.harrods.com\/en-gb\/foreo\/luna-2-facial-cleansing-brush-for-normal-skin-p000000000005981713"
+                }]
+            },
+            "worksWith": null,
+            "specialTag": null,
+            "special_notice": null,
+            "delivery_estimation": {
+                "date": "19 Feb 2021",
+                "country_name": "United Kingdom",
+                "text": "Expected delivery date for"
+            },
+            "variations": [{
+                "id": 1249,
+                "title": "LUNA 2 Normal skin",
+                "properties": {
+                    "id": "skin_type",
+                    "color": "#F1C5DC",
+                    "label": "Normal skin"
+                },
+                "price": {
+                    "currency": "GBP",
+                    "original": {
+                        "number": "149.000000",
+                        "formatted": "\u00a3 149",
+                        "symbol": "\u00a3 ",
+                        "position": 0
+                    },
+                    "discounted": {
+                        "formatted": null,
+                        "savings": {
+                            "number": null,
+                            "formatted": null,
+                            "text": null
+                        }
+                    },
+                    "installments": {
+                        "type": "clearpay",
+                        "properties": {
+                            "libraries": {
+                                "afterpay": "https:\/\/static-us.afterpay.com\/javascript\/present-afterpay.js",
+                                "clearpay": "https:\/\/js.afterpay.com\/afterpay-1.x.js"
+                            },
+                            "conf": {
+                                "priceSelector": ".afterpay__installments",
+                                "amount": 14900,
+                                "locale": "en_GB",
+                                "currency": "GBP",
+                                "minMaxThreshold": {
+                                    "min": 3500,
+                                    "max": 100000
+                                },
+                                "showUpperLimit": false
+                            },
+                            "clearpay_additional": {
+                                "afterpay_placement": {
+                                    "data_locale": "en_GB",
+                                    "data_currency": "GBP",
+                                    "data_amount": 149
+                                }
+                            }
+                        }
+                    },
+                    "dach_vat": null
+                },
+                "images": [{
+                    "badge": {
+                        "discount_badge": null,
+                        "promo_badge": null,
+                        "award_badge": "https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-02\/LUNA2_ELLEbeautyAwards2019__0.png?6JLTl2.WXk6xtWTJDZzg6sGRHA0q2fjH"
+                    },
+                    "product_combo": null,
+                    "url": "https:\/\/assets.foreo.com\/local\/static\/product-images\/2019-03\/LUNA2-PP-Productimage-Front-Normal%28425x523%29.png?TpywAg3I8BgcdOeLfHKn_FrhEch38IJP",
+                    "alt": "luna-2-normal-skin"
+                }, {
+                    "badge": {
+                        "discount_badge": null,
+                        "promo_badge": null,
+                        "award_badge": "https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-02\/LUNA2_ELLEbeautyAwards2019__0.png?6JLTl2.WXk6xtWTJDZzg6sGRHA0q2fjH"
+                    },
+                    "product_combo": null,
+                    "url": "https:\/\/assets.foreo.com\/local\/static\/products\/01-product_BACK_425x523_Normal.png?E0iv0elJaKY75AVTNTdMNXE14XEV2X5D",
+                    "alt": "luna-2-normal-skin"
+                }, {
+                    "badge": {
+                        "discount_badge": null,
+                        "promo_badge": null,
+                        "award_badge": "https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-02\/LUNA2_ELLEbeautyAwards2019__0.png?6JLTl2.WXk6xtWTJDZzg6sGRHA0q2fjH"
+                    },
+                    "product_combo": null,
+                    "url": "https:\/\/assets.foreo.com\/local\/static\/products\/LUNA2-PP-Productimage-InBox-Normal%28425x523%29.png?CY7fLSWj_grORvno57cIePnTHYbFZS_p",
+                    "alt": "luna-2-normal-skin"
+                }],
+                "addToCart": {
+                    "id": "buy_now",
+                    "title": "Buy",
+                    "disabled": false
+                },
+                "contains": null,
+                "perks": [{
+                    "title": "WARRANTY",
+                    "category": "warranty",
+                    "icon": "https:\/\/assets.foreo.com\/files\/static\/2019-09\/warranty.svg",
+                    "description": "2 years"
+                }],
+                "special_notice": null
+            }, {
+                "id": 1255,
+                "title": "LUNA 2 Combination skin",
+                "properties": {
+                    "id": "skin_type",
+                    "color": "#95CEF0",
+                    "label": "Combination skin"
+                },
+                "price": {
+                    "currency": "GBP",
+                    "original": {
+                        "number": "149.000000",
+                        "formatted": "\u00a3 149",
+                        "symbol": "\u00a3 ",
+                        "position": 0
+                    },
+                    "discounted": {
+                        "formatted": null,
+                        "savings": {
+                            "number": null,
+                            "formatted": null,
+                            "text": null
+                        }
+                    },
+                    "installments": {
+                        "type": "clearpay",
+                        "properties": {
+                            "libraries": {
+                                "afterpay": "https:\/\/static-us.afterpay.com\/javascript\/present-afterpay.js",
+                                "clearpay": "https:\/\/js.afterpay.com\/afterpay-1.x.js"
+                            },
+                            "conf": {
+                                "priceSelector": ".afterpay__installments",
+                                "amount": 14900,
+                                "locale": "en_GB",
+                                "currency": "GBP",
+                                "minMaxThreshold": {
+                                    "min": 3500,
+                                    "max": 100000
+                                },
+                                "showUpperLimit": false
+                            },
+                            "clearpay_additional": {
+                                "afterpay_placement": {
+                                    "data_locale": "en_GB",
+                                    "data_currency": "GBP",
+                                    "data_amount": 149
+                                }
+                            }
+                        }
+                    },
+                    "dach_vat": null
+                },
+                "images": [{
+                    "badge": {
+                        "discount_badge": null,
+                        "promo_badge": null,
+                        "award_badge": "https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-02\/LUNA2_ELLEbeautyAwards2019__0.png?6JLTl2.WXk6xtWTJDZzg6sGRHA0q2fjH"
+                    },
+                    "product_combo": null,
+                    "url": "https:\/\/assets.foreo.com\/local\/static\/product-images\/2020-04\/LUNA2-PP-Productimage-Front-Combination%28425x523%29_.png?9VpgNp5XadPu_Xsf8UNMGRhfDKQ9AtUS",
+                    "alt": "LUNA 2 combination skin"
+                }, {
+                    "badge": {
+                        "discount_badge": null,
+                        "promo_badge": null,
+                        "award_badge": "https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-02\/LUNA2_ELLEbeautyAwards2019__0.png?6JLTl2.WXk6xtWTJDZzg6sGRHA0q2fjH"
+                    },
+                    "product_combo": null,
+                    "url": "https:\/\/assets.foreo.com\/local\/static\/products\/01-product_BACK_425x523_Mixed.png?vQZ5we1XZzL3qGyeGYWl.M1nBNf4nIHn",
+                    "alt": "LUNA 2 combination skin"
+                }, {
+                    "badge": {
+                        "discount_badge": null,
+                        "promo_badge": null,
+                        "award_badge": "https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-02\/LUNA2_ELLEbeautyAwards2019__0.png?6JLTl2.WXk6xtWTJDZzg6sGRHA0q2fjH"
+                    },
+                    "product_combo": null,
+                    "url": "https:\/\/assets.foreo.com\/local\/static\/products\/LUNA2-PP-Productimage-InBox-Combination%28425x523%29.png?G9gYD_i49M3sD_k3Bi3wV_nWpMQLamlO",
+                    "alt": "LUNA 2 combination skin"
+                }],
+                "addToCart": {
+                    "id": "buy_now",
+                    "title": "Buy",
+                    "disabled": false
+                },
+                "contains": null,
+                "perks": [{
+                    "title": "WARRANTY",
+                    "category": "warranty",
+                    "icon": "https:\/\/assets.foreo.com\/files\/static\/2019-09\/warranty.svg",
+                    "description": "2 years"
+                }],
+                "special_notice": null
+            }, {
+                "id": 1252,
+                "title": "LUNA 2 Sensitive skin",
+                "properties": {
+                    "id": "skin_type",
+                    "color": "#D8CEF2",
+                    "label": "Sensitive skin"
+                },
+                "price": {
+                    "currency": "GBP",
+                    "original": {
+                        "number": "149.000000",
+                        "formatted": "\u00a3 149",
+                        "symbol": "\u00a3 ",
+                        "position": 0
+                    },
+                    "discounted": {
+                        "formatted": null,
+                        "savings": {
+                            "number": null,
+                            "formatted": null,
+                            "text": null
+                        }
+                    },
+                    "installments": {
+                        "type": "clearpay",
+                        "properties": {
+                            "libraries": {
+                                "afterpay": "https:\/\/static-us.afterpay.com\/javascript\/present-afterpay.js",
+                                "clearpay": "https:\/\/js.afterpay.com\/afterpay-1.x.js"
+                            },
+                            "conf": {
+                                "priceSelector": ".afterpay__installments",
+                                "amount": 14900,
+                                "locale": "en_GB",
+                                "currency": "GBP",
+                                "minMaxThreshold": {
+                                    "min": 3500,
+                                    "max": 100000
+                                },
+                                "showUpperLimit": false
+                            },
+                            "clearpay_additional": {
+                                "afterpay_placement": {
+                                    "data_locale": "en_GB",
+                                    "data_currency": "GBP",
+                                    "data_amount": 149
+                                }
+                            }
+                        }
+                    },
+                    "dach_vat": null
+                },
+                "images": [{
+                    "badge": {
+                        "discount_badge": null,
+                        "promo_badge": null,
+                        "award_badge": "https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-02\/LUNA2_ELLEbeautyAwards2019__0.png?6JLTl2.WXk6xtWTJDZzg6sGRHA0q2fjH"
+                    },
+                    "product_combo": null,
+                    "url": "https:\/\/assets.foreo.com\/local\/static\/product-images\/2020-04\/LUNA2-PP-Productimage-Front-Sensitive%28425x523%29%20%281%29.png?1_95PyiEr5GsByyl0lt9Si7Ho.d6mVCo",
+                    "alt": "LUNA 2"
+                }, {
+                    "badge": {
+                        "discount_badge": null,
+                        "promo_badge": null,
+                        "award_badge": "https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-02\/LUNA2_ELLEbeautyAwards2019__0.png?6JLTl2.WXk6xtWTJDZzg6sGRHA0q2fjH"
+                    },
+                    "product_combo": null,
+                    "url": "https:\/\/assets.foreo.com\/local\/static\/products\/01-product_BACK_425x523_Sensetive.png?SNIegdrUSh82_dkWendwo5H2CLKtWvO6",
+                    "alt": "LUNA 2"
+                }, {
+                    "badge": {
+                        "discount_badge": null,
+                        "promo_badge": null,
+                        "award_badge": "https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-02\/LUNA2_ELLEbeautyAwards2019__0.png?6JLTl2.WXk6xtWTJDZzg6sGRHA0q2fjH"
+                    },
+                    "product_combo": null,
+                    "url": "https:\/\/assets.foreo.com\/local\/static\/products\/LUNA2-PP-Productimage-InBox-Sensitive%28425x523%29%20copy.png?NLVNDdgvQx5nUfjFC8X95x2tRUGQPaEo",
+                    "alt": "LUNA 2"
+                }],
+                "addToCart": {
+                    "id": "sold_out",
+                    "title": "Sold out",
+                    "disabled": true
+                },
+                "contains": null,
+                "perks": [{
+                    "title": "WARRANTY",
+                    "category": "warranty",
+                    "icon": "https:\/\/assets.foreo.com\/files\/static\/2019-09\/warranty.svg",
+                    "description": "2 years"
+                }],
+                "special_notice": null
+            }, {
+                "id": 1258,
+                "title": "LUNA 2 Oily skin",
+                "properties": {
+                    "id": "skin_type",
+                    "color": "#96EBF2",
+                    "label": "Oily skin"
+                },
+                "price": {
+                    "currency": "GBP",
+                    "original": {
+                        "number": "149.000000",
+                        "formatted": "\u00a3 149",
+                        "symbol": "\u00a3 ",
+                        "position": 0
+                    },
+                    "discounted": {
+                        "formatted": null,
+                        "savings": {
+                            "number": null,
+                            "formatted": null,
+                            "text": null
+                        }
+                    },
+                    "installments": {
+                        "type": "clearpay",
+                        "properties": {
+                            "libraries": {
+                                "afterpay": "https:\/\/static-us.afterpay.com\/javascript\/present-afterpay.js",
+                                "clearpay": "https:\/\/js.afterpay.com\/afterpay-1.x.js"
+                            },
+                            "conf": {
+                                "priceSelector": ".afterpay__installments",
+                                "amount": 14900,
+                                "locale": "en_GB",
+                                "currency": "GBP",
+                                "minMaxThreshold": {
+                                    "min": 3500,
+                                    "max": 100000
+                                },
+                                "showUpperLimit": false
+                            },
+                            "clearpay_additional": {
+                                "afterpay_placement": {
+                                    "data_locale": "en_GB",
+                                    "data_currency": "GBP",
+                                    "data_amount": 149
+                                }
+                            }
+                        }
+                    },
+                    "dach_vat": null
+                },
+                "images": [{
+                    "badge": {
+                        "discount_badge": null,
+                        "promo_badge": null,
+                        "award_badge": "https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-02\/LUNA2_ELLEbeautyAwards2019__0.png?6JLTl2.WXk6xtWTJDZzg6sGRHA0q2fjH"
+                    },
+                    "product_combo": null,
+                    "url": "https:\/\/assets.foreo.com\/local\/static\/product-images\/2020-04\/LUNA2-PP-Productimage-Front-Oily%28425x523%29%20%281%29.png?eYOqhzlZVBaWTpAJ1iPWy1g6yQsM3TBA",
+                    "alt": "LUNA 2 oily skin"
+                }, {
+                    "badge": {
+                        "discount_badge": null,
+                        "promo_badge": null,
+                        "award_badge": "https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-02\/LUNA2_ELLEbeautyAwards2019__0.png?6JLTl2.WXk6xtWTJDZzg6sGRHA0q2fjH"
+                    },
+                    "product_combo": null,
+                    "url": "https:\/\/assets.foreo.com\/local\/static\/products\/01-product_BACK_425x523_Oily.png?usuUErbDpCjoTwPy6dDaQk7eNQU50dGo",
+                    "alt": "LUNA 2 oily skin"
+                }, {
+                    "badge": {
+                        "discount_badge": null,
+                        "promo_badge": null,
+                        "award_badge": "https:\/\/assets.foreo.com\/local\/static\/image-block\/2019-02\/LUNA2_ELLEbeautyAwards2019__0.png?6JLTl2.WXk6xtWTJDZzg6sGRHA0q2fjH"
+                    },
+                    "product_combo": null,
+                    "url": "https:\/\/assets.foreo.com\/local\/static\/products\/LUNA2-PP-Productimage-InBox-Oily%28425x523%29.png?gJCpuLs8n9E8vynsSvHVJS3kKHdcoDul",
+                    "alt": "LUNA 2 oily skin"
+                }],
+                "addToCart": {
+                    "id": "sold_out",
+                    "title": "Sold out",
+                    "disabled": true
+                },
+                "contains": null,
+                "perks": [{
+                    "title": "WARRANTY",
+                    "category": "warranty",
+                    "icon": "https:\/\/assets.foreo.com\/files\/static\/2019-09\/warranty.svg",
+                    "description": "2 years"
+                }],
+                "special_notice": null
+            }],
+            "variation_switcher_text": "Choose skin type"
+        }]
+    }
+}
