@@ -47,13 +47,16 @@ export default {
         },
 
         emitProductInfo (ProductArray) {
+
             console.log(ProductArray.type);
+
             if (ProductArray.type === 'product') {
                 this.view = 'Product';
             } else {
                 // ProductArray.attributes[0].bundle === 'default' ? this.view = 'Bundle' : this.view = 'BundleMasks';
                 this.view = (ProductArray.attributes[0].bundle === 'default') ? 'Bundle' : 'BundleMasks';
             }
+
             this.$emit('product-response', { // must be kebab-case like components
                 ProductArray: ProductArray.attributes,
                 view: this.view,
