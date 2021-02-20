@@ -23,7 +23,7 @@
             <template v-else-if="bundleType === 'masks'">
                 <div
                     v-if="
-                        product.variations[activeVariation].price.original.formatted.number !==
+                        activeProduct.price.original.formatted.number !==
                             activeBundleTotalPrice[activeVariation]
                     "
                     class="ecom__price-multi"
@@ -32,7 +32,7 @@
                         {{ activeBundleTotalPrice[activeVariation] }}
                     </p>
                     <p class="ecom__price-discounted">
-                        {{ product.variations[activeVariation].price.original.formatted }}
+                        {{ activeProduct.price.original.formatted }}
                     </p>
                 </div>
                 <div v-else>
@@ -43,43 +43,43 @@
 
             <!-- BEGIN PRODUCT PRICE -->
             <template v-else>
-                <template v-if="product.variations[activeVariation].price.discounted.formatted">
+                <template v-if="activeProduct.price.discounted.formatted">
                     <div class="ecom__price-multi">
                         <div class="ecom__price-discounted">
-                            {{ product.variations[activeVariation].price.discounted.formatted }}
+                            {{ activeProduct.price.discounted.formatted }}
                         </div>
                         <div class="ecom__price-old">
-                            {{ product.variations[activeVariation].price.original.formatted }}
+                            {{ activeProduct.price.original.formatted }}
                         </div>
                     </div>
                     <div class="ecom__price-save">
-                        <span>{{ product.variations[activeVariation].price.discounted.savings.text }}</span>
-                        {{ product.variations[activeVariation].price.discounted.savings.formatted }}
+                        <span>{{ activeProduct.price.discounted.savings.text }}</span>
+                        {{ activeProduct.price.discounted.savings.formatted }}
                     </div>
                 </template>
 
                 <div v-else class="ecom__price-original">
-                    {{ product.variations[activeVariation].price.original.formatted }}
+                    {{ activeProduct.price.original.formatted }}
                 </div>
             </template>
             <!-- END PRODUCT PRICE -->
 
             <!-- BEGIN VAT -->
-            <div v-if="product.variations[activeVariation].price.dach_vat" class="ecom__vat">
-                {{ product.variations[activeVariation].price.dach_vat.text }}
-                <a :href="product.variations[activeVariation].price.dach_vat.url" target="_blank">
-                    {{ product.variations[activeVariation].price.dach_vat.href_txt }}
+            <div v-if="activeProduct.price.dach_vat" class="ecom__vat">
+                {{ activeProduct.price.dach_vat.text }}
+                <a :href="activeProduct.price.dach_vat.url" target="_blank">
+                    {{ activeProduct.price.dach_vat.href_txt }}
                 </a>
             </div>
             <!-- END VAT -->
 
             <!-- BEGIN INSTALLMENTS -->
             <div
-                v-if="product.variations[activeVariation].price.installments"
+                v-if="activeProduct.price.installments"
                 class="ecom__installments"
-                v-html="afterpayMarkup"
+                v-html="afterPayMarkup"
             />
-            <afterpay-placement
+            <afterPay-placement
                 v-if="clearpayLoaded"
                 class="clearpay-wrap"
                 :data-locale="clearpay.dataLocale"
@@ -95,42 +95,42 @@
         <div class="ecom__atc-buy">
             <template
                 v-if="
-                    product.variations[activeVariation].addToCart.disabled &&
-                        product.variations[activeVariation].addToCart.id === 'sold_out'
+                    activeProduct.addToCart.disabled &&
+                        activeProduct.addToCart.id === 'sold_out'
                 "
             >
-                <div class="ecom__btn ecom__btn--disabled" v-html="product.variations[activeVariation].addToCart.title" />
+                <div class="ecom__btn ecom__btn--disabled" v-html="activeProduct.addToCart.title" />
             </template>
             <template
                 v-else-if="
-                    product.variations[activeVariation].addToCart.disabled &&
-                        product.variations[activeVariation].addToCart.id === 'buy_at'
+                    activeProduct.addToCart.disabled &&
+                        activeProduct.addToCart.id === 'buy_at'
                 "
             >
-                <a :href="product.variations[activeVariation].addToCart.places.url" class="ecom__btn ecom__btn--buyat">
-                    {{ product.variations[activeVariation].addToCart.title }}
-                    <figure v-if="product.variations[activeVariation].addToCart.places.img">
-                        <img :src="product.variations[activeVariation].addToCart.places.img">
+                <a :href="activeProduct.addToCart.places.url" class="ecom__btn ecom__btn--buyat">
+                    {{ activeProduct.addToCart.title }}
+                    <figure v-if="activeProduct.addToCart.places.img">
+                        <img :src="activeProduct.addToCart.places.img">
                     </figure>
-                    <span v-else-if="product.variations[activeVariation].addToCart.places.title">{{
-                        product.variations[activeVariation].addToCart.places.title
+                    <span v-else-if="activeProduct.addToCart.places.title">{{
+                        activeProduct.addToCart.places.title
                     }}</span>
                 </a>
             </template>
             <template
                 v-if="
-                    product.variations[activeVariation].addToCart.disabled &&
-                        product.variations[activeVariation].addToCart.id === 'coming_soon'
+                    activeProduct.addToCart.disabled &&
+                        activeProduct.addToCart.id === 'coming_soon'
                 "
             >
-                <div class="ecom__btn ecom__btn--disabled" v-html="product.variations[activeVariation].addToCart.title" />
+                <div class="ecom__btn ecom__btn--disabled" v-html="activeProduct.addToCart.title" />
             </template>
-            <template v-if="product.variations[activeVariation].addToCart.id === 'buy_now'">
+            <template v-if="activeProduct.addToCart.id === 'buy_now'">
                 <div
                     class="ecom__btn"
                     :class="{ 'ecom__btn--disabled': buttonDisabled }"
                     @click="generatePost"
-                    v-html="product.variations[activeVariation].addToCart.title"
+                    v-html="activeProduct.addToCart.title"
                 />
             </template>
         </div>
@@ -152,7 +152,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+import { apiServices } from '@/mixins/apiMixin';
 
 export default {
     name: 'AddToCart',
@@ -204,39 +204,56 @@ export default {
                     type: '',
                     bundleVariationsRefOptions: null
                 }
-            }
+            },
+            activeProduct: this.product.variations[this.activeVariation]
         };
     },
     computed: {
+
         calculateSavings () {
             this.calculateBundlePrice();
             return this.bundleSavings;
         },
+
         formatBundlePrice () {
-            let formatedBundlePrice = this.$props.bundlePrice;
-            if (this.product.variations[this.$props.activeVariation].price.original.symbol) {
-                if (this.product.variations[this.$props.activeVariation].price.original.position === 0) {
-                    formatedBundlePrice = String(this.product.variations[this.$props.activeVariation].price.original.symbol).concat(' ', String(formatedBundlePrice));
+
+            let formatedBundlePrice = this.bundlePrice;
+            const productOriginal = this.activeProduct.price.original;
+
+            if (productOriginal.symbol) {
+                if (productOriginal.position === 0) {
+                    // formatedBundlePrice = String(productOriginal.symbol).concat(' ', String(formatedBundlePrice));
+                    formatedBundlePrice = `${productOriginal.symbol} ${formatedBundlePrice}`;
                 } else {
-                    formatedBundlePrice = String(formatedBundlePrice).concat(' ', String(this.product.variations[this.$props.activeVariation].price.original.symbol));
+                    // formatedBundlePrice = String(formatedBundlePrice).concat(' ', String(productOriginal.symbol));
+                    formatedBundlePrice = `${formatedBundlePrice} ${productOriginal.symbol}`;
                 }
             }
             return formatedBundlePrice;
         },
-        afterpayMarkup () {
-            return '<div class="afterpay__installments"></div>';
+
+        afterPayMarkup () {
+            return '<div class="afterPay__installments"></div>';
         }
     },
-    beforeMount () {
+
+    created () {
+
         this.checkInitialData();
-        if (this.product.variations[this.activeVariation].price.installments && this.installmentsLoaded === false) this.initAfterpay();
+
+        const productInstallments = this.activeProduct.price.installments;
+        if (productInstallments && this.installmentsLoaded === false) this.initAfterPay();
     },
+
     updated () {
-        if (this.product.variations[this.activeVariation].price.installments && this.installmentsLoaded === true) this.updateAfterpay();
+        const productInstallments = this.activeProduct.price.installments;
+        if (productInstallments && this.installmentsLoaded === true) this.updateAfterPay();
     },
+
     methods: {
+
         checkInitialData () {
-            /*
+            /* INFO: zakomentirano od prije
             if (this.type === 'bundle' && this.product.bundle === 'default') {
                 this.post.data.type = 'product_bundle'
                 this.bundleType = 'default'
@@ -248,103 +265,145 @@ export default {
             }
             */
         },
+
         calculateBundlePrice () {
-            if (this.product.variations[this.$props.activeVariation].price.discounted.formatted) {
-                this.bundleFinalPrice = this.$props.product.variations[this.$props.activeVariation].price.discounted.formatted;
-                this.bundleSavings = this.$props.bundlePrice - (this.$props.product.variations[this.$props.activeVariation].price.original.number - this.$props.product.variations[this.$props.activeVariation].price.discounted.savings.number);
+
+            const productPrice = this.activeProduct.price;
+
+            if (productPrice.discounted.formatted) {
+                this.bundleFinalPrice = productPrice.discounted.formatted;
+                this.bundleSavings = this.bundlePrice - (productPrice.original.number - productPrice.discounted.savings.number);
             } else {
-                this.bundleFinalPrice = this.$props.product.variations[this.$props.activeVariation].price.original.formatted;
-                this.bundleSavings = this.$props.bundlePrice - this.$props.product.variations[this.$props.activeVariation].price.original.number;
+                this.bundleFinalPrice = productPrice.original.formatted;
+                this.bundleSavings = this.bundlePrice - productPrice.original.number;
             }
+
             // Format value & currency symbol
-            if (this.product.variations[this.$props.activeVariation].price.original.symbol) {
-                if (this.product.variations[this.$props.activeVariation].price.original.position === 0) {
-                    this.bundleSavings = String(this.product.variations[this.$props.activeVariation].price.original.symbol).concat(' ', parseFloat((this.bundleSavings).toFixed(2)));
+            if (productPrice.original.symbol) {
+                if (productPrice.original.position === 0) {
+                    // this.bundleSavings = String(productPrice.original.symbol).concat(' ', parseFloat((this.bundleSavings).toFixed(2)));
+                    this.bundleSavings = `${productPrice.original.symbol} ${parseFloat((this.bundleSavings).toFixed(2))}`;
                 } else {
-                    this.bundleSavings = parseFloat((this.bundleSavings).toFixed(2)).concat(' ', String(this.product.variations[this.$props.activeVariation].price.original.symbol));
+                    // this.bundleSavings = parseFloat((this.bundleSavings).toFixed(2)).concat(' ', String(productPrice.original.symbol));
+                    this.bundleSavings = `${parseFloat((this.bundleSavings).toFixed(2))} ${productPrice.original.symbol}`;
                 }
             }
         },
+
         setBundleVariationsRefOptions () {
 
+            const productVariation = this.activeProduct;
+            let { bundleVariationsRefOptions } = this.post.data;
+            bundleVariationsRefOptions = {};
+
             if (this.bundleType === 'default') {
-                let counter = 0;
-                this.post.data.bundleVariationsRefOptions = {};
-                for (const device of this.product.variations[this.$props.activeVariation].properties) {
-                    this.post.data.bundleVariationsRefOptions[device.id] = {
-                        'productVarId': this.activeCombination[counter],
-                        'qta': device.quantity
+
+                // let counter = 0;
+                // for (const device of productVariation.properties) {
+                //     bundleVariationsRefOptions[device.id] = {
+                //         'productVarId': this.activeCombination[counter],
+                //         'qta': device.quantity
+                //     };
+                //     console.log(device);
+                //     counter++;
+                // }
+
+                productVariation.properties.forEach(({ id, quantity }, index) => {
+                    bundleVariationsRefOptions[id] = {
+                        'productVarId': this.activeCombination[index],
+                        'qta': quantity
                     };
-                    counter++;
-                }
+                });
+
             } else if (this.bundleType === 'masks') {
-                this.post.data.bundleVariationsRefOptions = {};
-                for (const device of this.product.variations[this.$props.activeVariation].properties) {
-                    this.post.data.bundleVariationsRefOptions[device.id] = {
-                        'productVarId': device.variations[0].id,
-                        'qta': device.quantity
+
+                productVariation.properties.forEach(({ id, variations, quantity }) => {
+                    bundleVariationsRefOptions[id] = {
+                        'productVarId': variations[0].id,
+                        'qta': quantity
                     };
-                }
+                });
             }
         },
-        initAfterpay () {
-            for (const library in this.product.variations[this.activeVariation].price.installments.properties.libraries) {
+
+        initAfterPay () {
+
+            const productVariation = this.activeProduct;
+            const productLibraries = Object.values(productVariation.price.installments.properties.libraries);
+
+            productLibraries.forEach (library => {
                 const script = document.createElement('script');
-                script.setAttribute('src', this.product.variations[this.activeVariation].price.installments.properties.libraries[library]);
+                script.setAttribute('src', productLibraries[library]);
                 document.head.appendChild(script);
-            }
+            });
+
+
             setTimeout(() => {
                 this.installmentsLoaded = true;
-                this.updateAfterpay();
+                this.updateAfterPay();
             }, 2000);
         },
-        updateAfterpay () {
-            if (document.querySelector('.afterpay-paragraph')) document.querySelector('.afterpay-paragraph').remove();
-            const config = this.product.variations[this.activeVariation].price.installments.properties.conf;
-            if (this.product.variations[this.activeVariation].price.installments.type === 'afterpay_us' || this.product.variations[this.activeVariation].price.installments.type === 'afterpay_au') new window.presentAfterpay(config).init();
-            if (this.product.variations[this.activeVariation].price.installments.type === 'moip') this.initMoip();
-            if (this.product.variations[this.activeVariation].price.installments.type === 'clearpay') {
-                this.clearpayLoaded = this.product.variations[this.activeVariation].price.installments.properties.clearpay_additional.afterpay_placement;
-                this.clearpay.dataLocale = this.clearpayLoaded.data_locale;
-                this.clearpay.dataCurrency = this.clearpayLoaded.data_currency;
-                this.clearpay.dataAmount = this.clearpayLoaded.data_amount;
+
+        updateAfterPay () {
+
+            if (document.querySelector('.afterPay-paragraph')) document.querySelector('.afterPay-paragraph').remove();
+
+            const productInstallments = this.activeProduct.price.installments;
+            const config = productInstallments.properties.conf;
+
+            if (productInstallments.type === 'afterPay_us' || productInstallments.type === 'afterPay_au') new window.presentAfterPay(config).init();
+
+            if (productInstallments.type === 'moip') this.initMoip();
+
+            if (productInstallments.type === 'clearpay') {
+                this.clearpayLoaded = productInstallments.properties.clearpay_additional.afterPay_placement;
+
+                if (this.clearpayLoaded) {
+                    this.clearpay.dataLocale = this.clearpayLoaded.data_locale;
+                    this.clearpay.dataCurrency = this.clearpayLoaded.data_currency;
+                    this.clearpay.dataAmount = this.clearpayLoaded.data_amount;
+                }
             }
         },
+
         initMoip () {
-            this.moipLoaded = this.product.variations[this.activeVariation].price.installments.properties.value;
+            this.moipLoaded = this.activeProduct.price.installments.properties.value;
         },
+
         generatePost () {
             this.buttonDisabled = true;
+
             this.setBundleVariationsRefOptions();
-            this.post.data.purchasedEntityId = this.product.variations[this.activeVariation].id;
-            axios
-                .get(process.env.VUE_APP_TOKEN,
-                    {
-                        headers: {
-                            'X-Foreo-Source': process.env.VUE_APP_HASH,
-                            'Accept-Language': window.drupalSettings.path.currentLanguage
-                        }
-                    })
+            this.post.data.purchasedEntityId = this.activeProduct.id;
+
+            apiServices.get(process.env.VUE_APP_TOKEN,
+                {
+                    headers: {
+                        'X-Foreo-Source': process.env.VUE_APP_HASH,
+                        'Accept-Language': window.drupalSettings.path.currentLanguage
+                    }
+                })
                 .then(response => {
-                    this.adToCart(response.data.data.attributes);
+                    this.addToCart(response.data.data.attributes);
                 })
                 .catch(error => {
                     console.log(error);
                 });
         },
-        adToCart (token) {
+
+        addToCart (token) {
             this.popupContent = '';
+
             const $form = JSON.stringify(this.post);
-            axios
-                .post(process.env.VUE_APP_POST, $form,
-                    {
-                        headers: {
-                            'X-Foreo-Source': process.env.VUE_APP_HASH,
-                            'Authorization': `Bearer ${ token}`,
-                            'Accept-Language': window.drupalSettings.path.currentLanguage,
-                            'Content-Type': 'application/json'
-                        }
-                    })
+            apiServices.post(process.env.VUE_APP_POST, $form,
+                {
+                    headers: {
+                        'X-Foreo-Source': process.env.VUE_APP_HASH,
+                        'Authorization': `Bearer ${ token}`,
+                        'Accept-Language': window.drupalSettings.path.currentLanguage,
+                        'Content-Type': 'application/json'
+                    }
+                })
                 .then(response => {
                     this.responseHandling(response.data);
                 })
@@ -352,6 +411,7 @@ export default {
                     this.errorHandling(error);
                 });
         },
+
         responseHandling (data) {
             // this.popup = true
             // this.buttonDisabled = false
@@ -359,10 +419,14 @@ export default {
             if (data.datalayer_data) window.dataLayer.push(data.datalayer_data);
             window.location.href = '/cart';
         },
+
         errorHandling (error) {
+
             this.popup = true;
-            if (error.response.data.errors[0].detail) {
-                this.popupContent = error.response.data.errors[0].detail;
+            const errResponse = error.response.data.errors[0];
+
+            if (errResponse.detail) {
+                this.popupContent = errResponse.detail;
             } else if (error.response.data.errors) {
                 this.popupContent = error.response.data.errors;
             }

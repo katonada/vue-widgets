@@ -1,6 +1,9 @@
 <template>
     <div>
-        <get-product-info @ProductResponse="solveProductResponse" />
+        <get-product-info
+            :api-url="apiUrl"
+            @product-response="solveProductResponse"
+        />
 
         <!-- BEGIN MULTIPLE ITEMS (TABS) RENDER -->
         <tabs
@@ -45,7 +48,7 @@ import BundleView from './components/BundleView.vue';
 import BundleMasksView from './components/BundleMasksView.vue';
 import Tabs from './components/Tabs.vue';
 
-console.clear();
+// console.clear();
 
 export default {
     name: 'App',
@@ -55,6 +58,16 @@ export default {
         BundleView,
         BundleMasksView,
         Tabs
+    },
+    props: {
+        apiUrl: {
+            type: String,
+            default: ''
+        },
+        apiInstanceId: {
+            type: String,
+            default: ''
+        }
     },
     data () {
         return {

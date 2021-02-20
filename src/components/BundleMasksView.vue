@@ -19,7 +19,7 @@
 
                     <div v-if="product.variations" class="ecom__switcher">
                         <h3 class="ecom__switcher-title">
-                            {{ product.variation_switcher_text }}:{{ product.variations[activeVariation].properties.label }}
+                            {{ product.variation_switcher_text }}:{{ activeProduct.properties.label }}
                         </h3>
                         <div class="ecom__variations">
                             <label v-for="(variation, key, index) in product.variations" :key="index" class="ecom__variation">
@@ -58,16 +58,16 @@
                         class="ecom__atc"
                     />
 
-                    <div v-if="product.variations[activeVariation].special_notice" class="ecom__special-notes-wrap">
+                    <div v-if="activeProduct.special_notice" class="ecom__special-notes-wrap">
                         <div class="ecom__special-notes ecom__special-notes--variation">
                             <special-notice
-                                v-if="product.variations[activeVariation].special_notice"
-                                :variation="product.variations[activeVariation]"
+                                v-if="activeProduct.special_notice"
+                                :variation="activeProduct"
                             />
                         </div>
                     </div>
                     <div
-                        v-else-if="product.special_notice && !product.variations[activeVariation].special_notice"
+                        v-else-if="product.special_notice && !activeProduct.special_notice"
                         class="ecom__special-notes-wrap"
                     >
                         <div class="ecom__special-notes">
@@ -81,8 +81,8 @@
                     </div>
 
                     <perks
-                        v-if="product.variations[activeVariation].perks"
-                        :variation="product.variations[activeVariation]"
+                        v-if="activeProduct.perks"
+                        :variation="activeProduct"
                         class="ecom__perks"
                     />
                 </div>
@@ -123,32 +123,52 @@ export default {
     },
     data () {
         return {
+            activeProduct: this.product.variations[this.activeVariation],
             activeVariation: 0,
             buy: {},
             activeBundleSavings: [0, 0, 0, 0, 0, 0, 0, 0],
             activeBundleTotalPrice: [0, 0, 0, 0, 0, 0, 0, 0]
         };
     },
-    beforeMount () {
+
+    created () {
         this.calculateSavings();
     },
+
     methods: {
+
         calculateSavings () {
-            if (this.product.variations[this.activeVariation].properties.length) {
-                for (let i = 0; i < this.product.variations.length; i++) {
-                    const maskQuantity = this.product.variations[i].properties[0].quantity;
-                    const maskBundlePrice = this.product.variations[i].price.original.number;
-                    const maskOriginalPrice = this.product.variations[i].properties[0].variations[0].price.original.number;
+
+            if (this.activeProduct.properties.length) {
+
+                // for (let i = 0; i < this.product.variations.length; i++) {
+                //     const maskQuantity = this.product.variations[i].properties[0].quantity;
+                //     const maskBundlePrice = this.product.variations[i].price.original.number;
+                //     const maskOriginalPrice = this.product.variations[i].properties[0].variations[0].price.original.number;
+
+                //     const bundleSavings = (maskBundlePrice - (maskOriginalPrice) * maskQuantity).toFixed(2);
+
+                //     // Savings is negative value so we subtract it from bundle price to get total value.
+                //     const totalBundlePrice = maskBundlePrice - bundleSavings;
+
+                //     this.activeBundleSavings[i] = bundleSavings;
+
+                //     this.activeBundleTotalPrice[i] = totalBundlePrice;
+                // }
+
+                this.product.variations.forEach((product, index) => {
+                    const maskBundlePrice = product.price.original.number;
+                    const maskOriginalPrice = product.properties[0].variations[0].price.original.number;
+                    const maskQuantity = product.properties[0].quantity;
 
                     const bundleSavings = (maskBundlePrice - (maskOriginalPrice) * maskQuantity).toFixed(2);
 
                     // Savings is negative value so we subtract it from bundle price to get total value.
                     const totalBundlePrice = maskBundlePrice - bundleSavings;
 
-                    this.activeBundleSavings[i] = bundleSavings;
-
-                    this.activeBundleTotalPrice[i] = totalBundlePrice;
-                }
+                    this.activeBundleSavings[index] = bundleSavings;
+                    this.activeBundleTotalPrice[index] = totalBundlePrice;
+                });
             }
         }
     },

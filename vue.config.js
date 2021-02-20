@@ -13,5 +13,9 @@ module.exports = {
     },
     css: {
         extract: false,
+    },
+    devServer: {
+        port: process.env.PORT,
+        proxy: `http://127.0.0.1:${process.env.SERVER_PORT}`
     }
 };
