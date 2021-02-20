@@ -7,6 +7,14 @@ import { apiServices } from '@/mixins/apiMixin';
 
 export default {
     name: 'GetProductInfo',
+
+    props: {
+        apiUrl: {
+            type: String,
+            default: ''
+        }
+    },
+
     data () {
         return {
             instanceId: '',
@@ -17,6 +25,7 @@ export default {
             view: ''
         };
     },
+
     created () {
     // Get instance id from DOM.
     // this.instanceId = this.$parent.$parent.$options.el.id
@@ -36,7 +45,7 @@ export default {
 
         getProduct () {
             // .get(process.env.VUE_APP_GET + this.productType + '/' + this.productId, {
-            apiServices.get('api/bundle.json', {
+            apiServices.get(`api/${this.apiUrl}.json`, {
                 headers: {
                     'Accept-Language': this.language
                 }

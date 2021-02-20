@@ -1,6 +1,9 @@
 <template>
     <div>
-        <get-product-info @product-response="solveProductResponse" />
+        <get-product-info
+            :api-url="apiUrl"
+            @product-response="solveProductResponse"
+        />
 
         <!-- BEGIN MULTIPLE ITEMS (TABS) RENDER -->
         <tabs
@@ -58,6 +61,10 @@ export default {
     },
     props: {
         apiUrl: {
+            type: String,
+            default: ''
+        },
+        apiInstanceId: {
             type: String,
             default: ''
         }
