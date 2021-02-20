@@ -152,7 +152,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+import { apiServices } from '@/mixins/apiMixin';
 
 export default {
     name: 'AddToCart',
@@ -376,14 +376,13 @@ export default {
             this.setBundleVariationsRefOptions();
             this.post.data.purchasedEntityId = this.activeProduct.id;
 
-            axios
-                .get(process.env.VUE_APP_TOKEN,
-                    {
-                        headers: {
-                            'X-Foreo-Source': process.env.VUE_APP_HASH,
-                            'Accept-Language': window.drupalSettings.path.currentLanguage
-                        }
-                    })
+            apiServices.get(process.env.VUE_APP_TOKEN,
+                {
+                    headers: {
+                        'X-Foreo-Source': process.env.VUE_APP_HASH,
+                        'Accept-Language': window.drupalSettings.path.currentLanguage
+                    }
+                })
                 .then(response => {
                     this.addToCart(response.data.data.attributes);
                 })
@@ -396,16 +395,15 @@ export default {
             this.popupContent = '';
 
             const $form = JSON.stringify(this.post);
-            axios
-                .post(process.env.VUE_APP_POST, $form,
-                    {
-                        headers: {
-                            'X-Foreo-Source': process.env.VUE_APP_HASH,
-                            'Authorization': `Bearer ${ token}`,
-                            'Accept-Language': window.drupalSettings.path.currentLanguage,
-                            'Content-Type': 'application/json'
-                        }
-                    })
+            apiServices.post(process.env.VUE_APP_POST, $form,
+                {
+                    headers: {
+                        'X-Foreo-Source': process.env.VUE_APP_HASH,
+                        'Authorization': `Bearer ${ token}`,
+                        'Accept-Language': window.drupalSettings.path.currentLanguage,
+                        'Content-Type': 'application/json'
+                    }
+                })
                 .then(response => {
                     this.responseHandling(response.data);
                 })

@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+import { apiServices } from '@/mixins/apiMixin';
 
 export default {
     name: 'GetProductInfo',
@@ -35,13 +35,12 @@ export default {
     methods: {
 
         getProduct () {
-            axios
             // .get(process.env.VUE_APP_GET + this.productType + '/' + this.productId, {
-                .get('api/bundle.json', {
-                    headers: {
-                        'Accept-Language': this.language
-                    }
-                })
+            apiServices.get('api/bundle.json', {
+                headers: {
+                    'Accept-Language': this.language
+                }
+            })
                 .then(response => { this.emitProductInfo(response.data.data); })
                 .catch(error => { console.log(error); });
         },
