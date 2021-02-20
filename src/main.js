@@ -1,16 +1,43 @@
 import Vue from 'vue';
-import App from './App.vue';
+import Widget1 from './App.vue';
 
 Vue.config.productionTip = false;
+Vue.config.devtools = process.env.BUILD_TYPE !== 'production';
+Vue.config.performance = process.env.NODE_ENV !== 'production';
 
-// Create a root instance for each block
-const vueElements = document.getElementsByClassName('commerce_block');
-const count = vueElements.length;
+// // Create a root instance for each block
+// const vueElements = document.getElementsByClassName('commerce_block');
+// const count = vueElements.length;
 
-// Loop through each block
-for (let i = 0; i < count; i++) {
-    new Vue({
-        el: vueElements[0],
-        render: h => h(App)
-    });
+// // Loop through each block
+// for (let i = 0; i < count; i++) {
+//     console.log('this el data-api', vueElements[0].dataset.api);
+//     // eslint-disable-next-line no-new
+//     new Vue({
+//         el: vueElements[0],
+//         render: h => h(App, {
+//             props: {
+//                 apiUrl: vueElements[0].dataset.api
+//             }
+//         })
+//     });
+// }
+
+
+// create a constructor for your widget
+const Widget = Vue.extend({
+    render (h) {
+        console.log(this.$el.dataset.api);
+        return h(Widget1, {
+            props: {
+                apiUrl: this.$el.dataset.api
+            }
+        });
+    }
+});
+
+const nodes = document.querySelectorAll('.commerce_block');
+for (let i = 0; i < nodes.length; ++i) {
+    // eslint-disable-next-line no-new
+    new Widget({ el: nodes[i] });
 }

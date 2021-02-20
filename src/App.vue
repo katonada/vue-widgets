@@ -56,6 +56,12 @@ export default {
         BundleMasksView,
         Tabs
     },
+    props: {
+        apiUrl: {
+            type: String,
+            default: ''
+        }
+    },
     data () {
         return {
             productArray: [],
