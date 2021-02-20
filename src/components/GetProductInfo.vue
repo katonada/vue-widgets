@@ -56,12 +56,14 @@ export default {
                 this.view = (ProductArray.attributes[0].bundle === 'default') ? 'Bundle' : 'BundleMasks';
             }
 
-            this.$emit('product-response', { // must be kebab-case like components
+            const productResponse = {
                 ProductArray: ProductArray.attributes,
                 view: this.view,
                 instanceId: this.instanceId,
                 blockViewMode: this.blockViewMode
-            });
+            };
+
+            this.$emit('product-response', productResponse); // $emit event must be kebab-case like components
         }
     }
 };

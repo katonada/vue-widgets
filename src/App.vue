@@ -1,6 +1,6 @@
 <template>
     <div>
-        <get-product-info @ProductResponse="solveProductResponse" />
+        <get-product-info @product-response="solveProductResponse" />
 
         <!-- BEGIN MULTIPLE ITEMS (TABS) RENDER -->
         <tabs
