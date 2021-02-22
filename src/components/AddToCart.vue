@@ -351,6 +351,7 @@ export default {
             const productInstallments = this.activeProduct.price.installments;
             const config = productInstallments.properties.conf;
 
+            // eslint-disable-next-line new-cap
             if (productInstallments.type === 'afterPay_us' || productInstallments.type === 'afterPay_au') new window.presentAfterPay(config).init();
 
             if (productInstallments.type === 'moip') this.initMoip();

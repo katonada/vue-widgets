@@ -26,10 +26,8 @@ Vue.config.performance = process.env.NODE_ENV !== 'production';
 
 // create a constructor for your widget
 const Widget = Vue.extend({
+
     render (h) {
-        console.log('api', this.$el.dataset);
-        console.log('api', this.$el.dataset.api);
-        console.log('instance-id', this.$el.dataset.instanceId);
         return h(Widget1, {
             props: {
                 apiUrl: this.$el.dataset.api,
