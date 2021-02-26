@@ -199,7 +199,7 @@ export default {
 
                     if (prop.variations.length) {
                         tempCombination.push(prop.variations[0].id);
-                        this.activePrices[index] = +prop.variations[0].price.original.number; // sign + converts to number
+                        this.activePrices[index] = prop.variations[0].price.original.number;
                     }
                 });
 
@@ -221,6 +221,8 @@ export default {
 
                 const difference = image.product_combo.filter(combo => !this.activeCombination.includes(combo));
                 if (difference.length === 0) this.activeImages.push(image);
+
+                console.log(image, difference, this.activeImages);
             });
 
             // In case of content fail prevent slider link breaking
