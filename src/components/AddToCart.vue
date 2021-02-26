@@ -155,7 +155,9 @@
 import { apiServices } from '@/mixins/apiMixin';
 
 export default {
+
     name: 'AddToCart',
+
     props: {
         product: {
             type: Object,
@@ -182,6 +184,7 @@ export default {
             default: () => []
         }
     },
+
     data () {
         return {
             bundleFinalPrice: 0,
@@ -208,6 +211,7 @@ export default {
             activeProduct: this.product.variations[this.activeVariation]
         };
     },
+
     computed: {
 
         calculateSavings () {

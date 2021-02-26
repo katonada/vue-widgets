@@ -97,16 +97,16 @@
                         class="ecom__atc"
                     />
 
-                    <div v-if="product.variations[activeVariation].special_notice" class="ecom__special-notes-wrap">
+                    <div v-if="productActive.special_notice" class="ecom__special-notes-wrap">
                         <div class="ecom__special-notes ecom__special-notes--variation">
                             <special-notice
-                                v-if="product.variations[activeVariation].special_notice"
-                                :variation="product.variations[activeVariation]"
+                                v-if="productActive.special_notice"
+                                :variation="productActive"
                             />
                         </div>
                     </div>
                     <div
-                        v-else-if="product.special_notice && !product.variations[activeVariation].special_notice"
+                        v-else-if="product.special_notice && !productActive.special_notice"
                         class="ecom__special-notes-wrap"
                     >
                         <div class="ecom__special-notes">
@@ -120,8 +120,8 @@
                     </div>
 
                     <perks
-                        v-if="product.variations[activeVariation].perks"
-                        :variation="product.variations[activeVariation]"
+                        v-if="productActive.perks"
+                        :variation="productActive"
                         class="ecom__perks"
                     />
                 </div>
@@ -140,7 +140,9 @@ import Slider from './Slider.vue';
 import SpecialNotice from './SpecialNotice';
 
 export default {
+
     name: 'BundleView',
+
     components: {
         Loader,
         AddToCart,
@@ -150,6 +152,7 @@ export default {
         Info,
         SpecialNotice
     },
+
     props: {
         product: {
             type: Object,
@@ -160,6 +163,7 @@ export default {
             default: ''
         }
     },
+
     data () {
         return {
             activeVariation: 0, // Will always be 0 for Bundles
@@ -167,13 +171,23 @@ export default {
             activePrices: [0, 0, 0, 0, 0, 0, 0, 0],
             activeCombination: [],
             activeImages: [],
-            buy: {}
+            buy: {},
         };
     },
-    beforeMount () {
+
+    computed: {
+
+        productActive () {
+            return this.product.variations[this.activeVariation] || { special_notice:'', perks: '' };
+        },
+    },
+
+    created () {
         this.setInitialValues();
     },
+
     methods: {
+
         setInitialValues () {
             if (this.product.variations[this.activeVariation].properties.length) {
                 const tempCombination = [];
@@ -187,6 +201,7 @@ export default {
                 this.calculateCombination();
             }
         },
+
         calculateCombination (place, value, key, price) {
             this.activeDevices[place] = key;
             this.activeCombination[place] = value;
