@@ -189,14 +189,21 @@ export default {
     methods: {
 
         setInitialValues () {
-            if (this.product.variations[this.activeVariation].properties.length) {
+
+            const product = this.product.variations[this.activeVariation];
+
+            if (product.properties.length) {
+
                 const tempCombination = [];
-                for (let i = 0; i < this.product.variations[this.activeVariation].properties.length; i++) {
-                    if (this.product.variations[this.activeVariation].properties[i].variations.length !== 0) {
-                        tempCombination.push(this.product.variations[this.activeVariation].properties[i].variations[0].id);
-                        this.activePrices[i] = parseFloat(this.product.variations[this.activeVariation].properties[i].variations[0].price.original.number);
+
+                product.properties.forEach((prop, index) => {
+
+                    if (prop.variations.length) {
+                        tempCombination.push(prop.variations[0].id);
+                        this.activePrices[index] = prop.variations[0].price.original.number;
                     }
-                }
+                });
+
                 this.activeCombination = tempCombination;
                 this.calculateCombination();
             }
