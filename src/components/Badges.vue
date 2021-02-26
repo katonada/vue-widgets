@@ -1,13 +1,13 @@
 <template>
     <div>
-        <figure v-if="badges.badge.discount_badge" class="ecom__slider-discount">
-            <figcaption>-{{ badges.badge.discount_badge.promo_percentage }}%</figcaption>
+        <figure v-if="badge.discount_badge" class="ecom__slider-discount">
+            <figcaption>-{{ badge.discount_badge.promo_percentage }}%</figcaption>
         </figure>
-        <figure v-if="badges.badge.promo_badge" class="ecom__slider-promo">
-            <img :src="badges.badge.promo_badge">
+        <figure v-if="badge.promo_badge" class="ecom__slider-promo">
+            <img :src="badge.promo_badge">
         </figure>
-        <figure v-else-if="badges.badge.award_badge && !badges.badge.promo_badge" class="ecom__slider-award">
-            <img :src="badges.badge.award_badge">
+        <figure v-else-if="badge.award_badge && !badge.promo_badge" class="ecom__slider-award">
+            <img :src="badge.award_badge">
         </figure>
     </div>
 </template>
@@ -23,6 +23,7 @@ export default {
     },
     data () {
         return {
+            badge: this.badges.badge
         };
     },
     methods: {

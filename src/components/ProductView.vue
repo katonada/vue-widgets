@@ -6,18 +6,18 @@
                 <!-- BEGIN VARIATIONS IMAGES (SLIDER) -->
                 <div class="ecom__media">
                     <!-- Show first image only for B block; no slider is present. -->
-                    <template v-if="blockViewMode === 'ecommerce_b' && product.variations[activeVariation].images[0].url">
+                    <template v-if="blockViewMode === 'ecommerce_b' && activeProductImg.url">
                         <figure class="ecom__b-figure">
                             <img
-                                :src="product.variations[activeVariation].images[0].url"
-                                :alt="product.variations[activeVariation].images[0].alt"
+                                :src="activeProductImg.url"
+                                :alt="activeProductImg.alt"
                             >
                         </figure>
-                        <figure v-if="product.variations[activeVariation].images[0].badge.discount_badge" class="ecom__b-discount">
-                            <figcaption>-{{ product.variations[activeVariation].images[0].badge.promo_percentage }}%</figcaption>
+                        <figure v-if="activeProductImg.badge.discount_badge" class="ecom__b-discount">
+                            <figcaption>-{{ activeProductImg.badge.promo_percentage }}%</figcaption>
                         </figure>
-                        <figure v-else-if="product.variations[activeVariation].images[0].badge.promo_badge" class="ecom__b-promo">
-                            <img :src="product.variations[activeVariation].images[0].badge.promo_badge">
+                        <figure v-else-if="activeProductImg.badge.promo_badge" class="ecom__b-promo">
+                            <img :src="activeProductImg.badge.promo_badge">
                         </figure>
                     </template>
                     <template v-else>
@@ -48,7 +48,7 @@
                     />
 
                     <delivery-estimate
-                        v-if="product.delivery_estimation.text && product.variations[activeVariation].addToCart.disabled !== true"
+                        v-if="product.delivery_estimation.text && activeProduct.addToCart.disabled !== true"
                         :estimation="product.delivery_estimation"
                         class="ecom__delivery"
                     />
@@ -57,16 +57,16 @@
 
                     <available-at v-if="product.availableAt" :product="product" class="ecom__available" />
 
-                    <div v-if="product.variations[activeVariation].special_notice" class="ecom__special-notes-wrap">
+                    <div v-if="activeProduct.special_notice" class="ecom__special-notes-wrap">
                         <div class="ecom__special-notes ecom__special-notes--variation">
                             <special-notice
-                                v-if="product.variations[activeVariation].special_notice"
-                                :variation="product.variations[activeVariation]"
+                                v-if="activeProduct.special_notice"
+                                :variation="activeProduct"
                             />
                         </div>
                     </div>
                     <div
-                        v-else-if="product.special_notice && !product.variations[activeVariation].special_notice"
+                        v-else-if="product.special_notice && !activeProduct.special_notice"
                         class="ecom__special-notes-wrap"
                     >
                         <div class="ecom__special-notes">
@@ -80,8 +80,8 @@
                     </div>
 
                     <perks
-                        v-if="product.variations[activeVariation].perks"
-                        :variation="product.variations[activeVariation]"
+                        v-if="activeProduct.perks"
+                        :variation="activeProduct"
                         class="ecom__perks"
                     />
                 </div>
@@ -103,7 +103,9 @@ import Perks from './Perks.vue';
 import SpecialNotice from './SpecialNotice.vue';
 
 export default {
+
     name: 'ProductView',
+
     components: {
         Loader,
         Slider,
@@ -115,6 +117,7 @@ export default {
         Perks,
         SpecialNotice
     },
+
     props: {
         product: {
             type: Object,
@@ -129,12 +132,16 @@ export default {
             default: ''
         }
     },
+
     data () {
         return {
             activeVariation: 0,
-            buy: {}
+            buy: {},
+            activeProduct: this.product.variations[this.activeVariation],
+            activeProductImg: this.activeProduct.images[0],
         };
     },
+
     methods: {
         setActiveVariation (response) {
             this.activeVariation = response.activeVariation;
