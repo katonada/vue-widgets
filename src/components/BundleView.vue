@@ -195,12 +195,11 @@ export default {
             if (product.properties.length) {
 
                 const tempCombination = [];
-
                 product.properties.forEach((prop, index) => {
 
                     if (prop.variations.length) {
                         tempCombination.push(prop.variations[0].id);
-                        this.activePrices[index] = prop.variations[0].price.original.number;
+                        this.activePrices[index] = +prop.variations[0].price.original.number; // sign + converts to number
                     }
                 });
 
@@ -210,12 +209,17 @@ export default {
         },
 
         calculateCombination (place, value, key, price) {
+
             this.activeDevices[place] = key;
             this.activeCombination[place] = value;
             this.activePrices[place] = price;
             this.activeImages = [];
-            this.product.variations[this.activeVariation].images.forEach(image => {
-                const difference = image.product_combo.filter(x => !this.activeCombination.includes(x));
+
+            const { images } = this.product.variations[this.activeVariation];
+
+            images.forEach(image => {
+
+                const difference = image.product_combo.filter(combo => !this.activeCombination.includes(combo));
                 if (difference.length === 0) this.activeImages.push(image);
             });
 
