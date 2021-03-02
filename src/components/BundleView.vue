@@ -19,7 +19,7 @@
                 <div class="ecom__data">
                     <info :product="product" :active-variation="activeVariation" class="ecom__info" />
 
-                    <div v-if="product.variations" class="ecom__switcher">
+                    <div v-if="product.variations.length" class="ecom__switcher">
                         <!-- BEGIN VARIATIONS (always 0 for bundles but we leave the possibility open) -->
                         <template v-for="variation in product.variations">
                             <!-- BEGIN PRODUCTS (devices that comprise bundle) -->
@@ -28,8 +28,9 @@
                                 :key="index"
                                 :class="'ecom__switcher-item ecom__switcher-item--'"
                             >
+
                                 <!--BEGIN SWITCHER -->
-                                <template v-if="property.variations.length > 1">
+                                <template v-if="property.variations.length">
                                     <h2 class="ecom__switcher-product-name">
                                         {{ property.title }}
                                     </h2>
@@ -46,7 +47,7 @@
 
                                     <div class="ecom__switcher-dots">
                                         <label
-                                            v-for="(variation, key, index) in property.variations"
+                                            v-for="(propVariation, key, index) in property.variations"
                                             :key="index"
                                             :style="{ 'background-color': variation.properties.color }"
                                             :class="'ecom__switcher-dot ecom__switcher-dot--' + variation.id"
@@ -54,22 +55,22 @@
                                             <input
                                                 type="radio"
                                                 :name="property.id + instance"
-                                                :class="'id' + variation.id"
+                                                :class="'id' + propVariation.id"
                                                 :checked="key === 0"
                                                 @change="
                                                     calculateCombination(
                                                         propertyKey,
-                                                        variation.id,
+                                                        propVariation.id,
                                                         key,
-                                                        parseFloat(variation.price.original.number)
+                                                        +propVariation.price.original.number
                                                     )
                                                 "
                                             >
                                             <span
-                                                v-if="variation.properties.id === 'volume' || variation.properties.id === 'country'"
+                                                v-if="propVariation.properties.id === 'volume' || propVariation.properties.id === 'country'"
                                                 class="ecom__variation-name"
                                             >
-                                                {{ variation.properties.label }}
+                                                Label: {{ propVariation.properties.label }}
                                             </span>
                                             <span v-else />
                                         </label>
@@ -92,7 +93,7 @@
                         :product="product"
                         :active-variation="activeVariation"
                         :type="'bundle'"
-                        :bundle-price="activePrices.reduce((a, b) => a + b)"
+                        :bundle-price="+activePrices.reduce((a, b) => a + b)"
                         :active-combination="activeCombination"
                         class="ecom__atc"
                     />
@@ -220,9 +221,7 @@ export default {
             images.forEach(image => {
 
                 const difference = image.product_combo.filter(combo => !this.activeCombination.includes(combo));
-                if (difference.length === 0) this.activeImages.push(image);
-
-                console.log(image, difference, this.activeImages);
+                if (difference.length < 1) this.activeImages.push(image);
             });
 
             // In case of content fail prevent slider link breaking
