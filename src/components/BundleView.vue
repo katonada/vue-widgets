@@ -47,10 +47,10 @@
 
                                     <div class="ecom__switcher-dots">
                                         <label
-                                            v-for="(propVariation, key, index) in property.variations"
-                                            :key="index"
-                                            :style="{ 'background-color': variation.properties.color }"
-                                            :class="'ecom__switcher-dot ecom__switcher-dot--' + variation.id"
+                                            v-for="(propVariation, key, propIndex) in property.variations"
+                                            :key="propIndex"
+                                            :style="{ 'background-color': propVariation.properties.color }"
+                                            :class="'ecom__switcher-dot ecom__switcher-dot--' + propVariation.id"
                                         >
                                             <input
                                                 type="radio"
