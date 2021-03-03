@@ -1,5 +1,8 @@
 import Vue from 'vue';
-import CommerceBlock from './CommerceBlock.vue';
+import { store } from '@/store/store';
+
+import Header from '@/Header';
+import CommerceBlock from '@/CommerceBlock.vue';
 
 Vue.config.productionTip = false;
 Vue.config.devtools = process.env.BUILD_TYPE !== 'production';
@@ -23,10 +26,17 @@ Vue.config.performance = process.env.NODE_ENV !== 'production';
 //     });
 // }
 
+// eslint-disable-next-line no-new
+new Vue({
+    el: '#header',
+    store,
+    render: h => h(Header)
+});
 
 // create a constructor for your widget
 const Widget = Vue.extend({
 
+    store,
     render (h) {
         return h(CommerceBlock, {
             props: {

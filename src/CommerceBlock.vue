@@ -1,6 +1,6 @@
 <template>
     <div>
-
+        {{ getMQ }}
         <!-- BEGIN MULTIPLE ITEMS (TABS) RENDER -->
         <tabs
             v-if="productArray.length > 1"
@@ -38,6 +38,7 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
 import { apiServices } from '@/mixins/apiMixin';
 
 import ProductView from './components/ProductView.vue';
@@ -46,7 +47,7 @@ import BundleMasksView from './components/BundleMasksView.vue';
 import Tabs from './components/Tabs.vue';
 
 export default {
-    name: 'App',
+    name: 'CommerceBlock',
 
     components: {
         ProductView,
@@ -77,6 +78,11 @@ export default {
             blockViewMode: 'ecommerce_b',
             language: 'en'
         };
+    },
+
+    computed: {
+        ...mapGetters(['getMQ']),
+        // ...mapGetters('meta', ['main']),
     },
 
     created () {
