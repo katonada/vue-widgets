@@ -222,8 +222,8 @@
                         "type": "clearpay",
                         "properties": {
                             "libraries": {
-                                "afterpay": "https:\/\/static-us.afterpay.com\/javascript\/present-afterpay.js",
-                                "clearpay": "https:\/\/js.afterpay.com\/afterpay-1.x.js"
+                                "afterpay": "https://static-us.afterpay.com/javascript/present-afterpay.js",
+                                "clearpay": "https://js.afterpay.com/afterpay-1.x.js"
                             },
                             "conf": {
                                 "priceSelector": ".afterpay__installments",
@@ -247,184 +247,51 @@
                     },
                     "dach_vat": null
                 },
-                "images": [{
-                    "badge": {
-                        "discount_badge": null,
-                        "promo_badge": "https:\/\/assets.foreo.com\/local\/static\/assets\/gift-flat_1.png?MMsxNk_qt7MN4kNqYuJDMGRJnmkxfBTJ",
-                        "award_badge": null
-                    },
-                    "product_combo": ["1407", "1556"],
-                    "url": "https:\/\/assets.foreo.com\/local\/2021-01\/bundle_IRISblack-LUNAfofo-blue.png?COB9h6MJlrCKvkggfx4aObieBO23LqBH",
-                    "alt": "iris \u0026 luna fofo"
-                }, {
-                    "badge": {
-                        "discount_badge": null,
-                        "promo_badge": "https:\/\/assets.foreo.com\/local\/static\/assets\/gift-flat_1.png?MMsxNk_qt7MN4kNqYuJDMGRJnmkxfBTJ",
-                        "award_badge": null
-                    },
-                    "product_combo": ["1152", "1555"],
-                    "url": "https:\/\/assets.foreo.com\/local\/2021-01\/bundle_IRISblack-LUNAfofo-fuchsia.png?eES_NvcQ_MsyLlIUm1S2VCKaDpHsIQDR",
-                    "alt": "iris \u0026 luna fofo"
-                }, {
-                    "badge": {
-                        "discount_badge": null,
-                        "promo_badge": "https:\/\/assets.foreo.com\/local\/static\/assets\/gift-flat_1.png?MMsxNk_qt7MN4kNqYuJDMGRJnmkxfBTJ",
-                        "award_badge": null
-                    },
-                    "product_combo": ["1407", "1558"],
-                    "url": "https:\/\/assets.foreo.com\/local\/2021-01\/bundle_IRISblack-LUNAfofo-pink.png?8XXpADg.Lx9PoLHIQxAGYQ_GZVSlla_f",
-                    "alt": "iris \u0026 luna fofo"
-                }, {
-                    "badge": {
-                        "discount_badge": null,
-                        "promo_badge": "https:\/\/assets.foreo.com\/local\/static\/assets\/gift-flat_1.png?MMsxNk_qt7MN4kNqYuJDMGRJnmkxfBTJ",
-                        "award_badge": null
-                    },
-                    "product_combo": ["1407", "1554"],
-                    "url": "https:\/\/assets.foreo.com\/local\/2021-01\/bundle_IRISblack-LUNAfofo-yellow.png?S4QhP9zV2xfgM_ZLqjaik67JogWkB9On",
-                    "alt": "iris \u0026 luna fofo"
-                }, {
-                    "badge": {
-                        "discount_badge": null,
-                        "promo_badge": "https:\/\/assets.foreo.com\/local\/static\/assets\/gift-flat_1.png?MMsxNk_qt7MN4kNqYuJDMGRJnmkxfBTJ",
-                        "award_badge": null
-                    },
-                    "product_combo": ["1152", "1556"],
-                    "url": "https:\/\/assets.foreo.com\/local\/2021-01\/bundle_IRISfuchsia-LUNAfofo-blue.png?42MH60KDhRT2L71P4N4x2bQSa6ZCkdyx",
-                    "alt": "iris \u0026 luna fofo"
-                }, {
-                    "badge": {
-                        "discount_badge": null,
-                        "promo_badge": "https:\/\/assets.foreo.com\/local\/static\/assets\/gift-flat_1.png?MMsxNk_qt7MN4kNqYuJDMGRJnmkxfBTJ",
-                        "award_badge": null
-                    },
-                    "product_combo": ["1152", "1555"],
-                    "url": "https:\/\/assets.foreo.com\/local\/2021-01\/bundle_IRISfuchsia-LUNAfofo-fuchsia.png?xG5AtTKt5kCP8BfZko6ecdlzDVkYhQMM",
-                    "alt": "iris \u0026 luna fofo"
-                }, {
-                    "badge": {
-                        "discount_badge": null,
-                        "promo_badge": "https:\/\/assets.foreo.com\/local\/static\/assets\/gift-flat_1.png?MMsxNk_qt7MN4kNqYuJDMGRJnmkxfBTJ",
-                        "award_badge": null
-                    },
-                    "product_combo": ["1152", "1558"],
-                    "url": "https:\/\/assets.foreo.com\/local\/2021-01\/bundle_IRISfuchsia-LUNAfofo-pink.png?kRBGt0uz_o8ryPEy.ckeYo5ZsNbMIuVU",
-                    "alt": "iris \u0026 luna fofo"
-                }, {
-                    "badge": {
-                        "discount_badge": null,
-                        "promo_badge": "https:\/\/assets.foreo.com\/local\/static\/assets\/gift-flat_1.png?MMsxNk_qt7MN4kNqYuJDMGRJnmkxfBTJ",
-                        "award_badge": null
-                    },
-                    "product_combo": ["1152", "1554"],
-                    "url": "https:\/\/assets.foreo.com\/local\/2021-01\/bundle_IRISfuchsia-LUNAfofo-yellow.png?BmCxquVEkuxhwPRD__kvJulZy9stmuND",
-                    "alt": "iris \u0026 luna fofo"
-                }, {
-                    "badge": {
-                        "discount_badge": null,
-                        "promo_badge": "https:\/\/assets.foreo.com\/local\/static\/assets\/gift-flat_1.png?MMsxNk_qt7MN4kNqYuJDMGRJnmkxfBTJ",
-                        "award_badge": null
-                    },
-                    "product_combo": ["1143", "1556"],
-                    "url": "https:\/\/assets.foreo.com\/local\/2021-01\/bundle_IRISmint-LUNAfofo-blue.png?YFPYCk2hDZtoM7yNcQhRa.2QN0Fj_dIe",
-                    "alt": "iris \u0026 luna fofo"
-                }, {
-                    "badge": {
-                        "discount_badge": null,
-                        "promo_badge": "https:\/\/assets.foreo.com\/local\/static\/assets\/gift-flat_1.png?MMsxNk_qt7MN4kNqYuJDMGRJnmkxfBTJ",
-                        "award_badge": null
-                    },
-                    "product_combo": ["1143"],
-                    "url": "https:\/\/assets.foreo.com\/local\/2021-01\/bundle_IRISmint-LUNAfofo-fuchsia.png?jMSjSlQLOrkRsa_29o6tE9lzbnOFMMmt",
-                    "alt": "iris \u0026 luna fofo"
-                }, {
-                    "badge": {
-                        "discount_badge": null,
-                        "promo_badge": "https:\/\/assets.foreo.com\/local\/static\/assets\/gift-flat_1.png?MMsxNk_qt7MN4kNqYuJDMGRJnmkxfBTJ",
-                        "award_badge": null
-                    },
-                    "product_combo": ["1143", "1558"],
-                    "url": "https:\/\/assets.foreo.com\/local\/2021-01\/bundle_IRISmint-LUNAfofo-pink.png?FGXlUh7CXLqjIXmVNRWN6GtDj4tRTz_4",
-                    "alt": "iris \u0026 luna fofo"
-                }, {
-                    "badge": {
-                        "discount_badge": null,
-                        "promo_badge": "https:\/\/assets.foreo.com\/local\/static\/assets\/gift-flat_1.png?MMsxNk_qt7MN4kNqYuJDMGRJnmkxfBTJ",
-                        "award_badge": null
-                    },
-                    "product_combo": ["1143", "1554"],
-                    "url": "https:\/\/assets.foreo.com\/local\/2021-01\/bundle_IRISmint-LUNAfofo-yellow.png?iXpUG9C0G4gGlwHn72EixqavFBJAjiDn",
-                    "alt": "iris \u0026 luna fofo"
-                }, {
-                    "badge": {
-                        "discount_badge": null,
-                        "promo_badge": "https:\/\/assets.foreo.com\/local\/static\/assets\/gift-flat_1.png?MMsxNk_qt7MN4kNqYuJDMGRJnmkxfBTJ",
-                        "award_badge": null
-                    },
-                    "product_combo": ["1151", "1556"],
-                    "url": "https:\/\/assets.foreo.com\/local\/2021-01\/bundle_IRISpink-LUNAfofo-blue.png?G1939j46rjgR8.v0HhbuStkAOjK1X3MO",
-                    "alt": "iris \u0026 luna fofo"
-                }, {
-                    "badge": {
-                        "discount_badge": null,
-                        "promo_badge": "https:\/\/assets.foreo.com\/local\/static\/assets\/gift-flat_1.png?MMsxNk_qt7MN4kNqYuJDMGRJnmkxfBTJ",
-                        "award_badge": null
-                    },
-                    "product_combo": ["1151", "1555"],
-                    "url": "https:\/\/assets.foreo.com\/local\/2021-01\/bundle_IRISpink-LUNAfofo-fuchsia.png?Bypmg7Riuw4MrNlWjT2Y6b7aqp.5pZrd",
-                    "alt": "iris \u0026 luna fofo"
-                }, {
-                    "badge": {
-                        "discount_badge": null,
-                        "promo_badge": "https:\/\/assets.foreo.com\/local\/static\/assets\/gift-flat_1.png?MMsxNk_qt7MN4kNqYuJDMGRJnmkxfBTJ",
-                        "award_badge": null
-                    },
-                    "product_combo": ["1151", "1558"],
-                    "url": "https:\/\/assets.foreo.com\/local\/2021-01\/bundle_IRISpink-LUNAfofo-pink.png?BuRlu80_UGU4Z3FoomT61N90RSB_RSgB",
-                    "alt": "iris \u0026 luna fofo"
-                }, {
-                    "badge": {
-                        "discount_badge": null,
-                        "promo_badge": "https:\/\/assets.foreo.com\/local\/static\/assets\/gift-flat_1.png?MMsxNk_qt7MN4kNqYuJDMGRJnmkxfBTJ",
-                        "award_badge": null
-                    },
-                    "product_combo": ["1151", "1554"],
-                    "url": "https:\/\/assets.foreo.com\/local\/2021-01\/bundle_IRISpink-LUNAfofo-yellow.png?R.7X_kKzQIqwZ8O71esGCYT7ntDq7l4_",
-                    "alt": "iris \u0026 luna fofo"
-                }, {
-                    "badge": {
-                        "discount_badge": null,
-                        "promo_badge": "https:\/\/assets.foreo.com\/local\/static\/assets\/gift-flat_1.png?MMsxNk_qt7MN4kNqYuJDMGRJnmkxfBTJ",
-                        "award_badge": null
-                    },
-                    "product_combo": ["1143", "1558"],
-                    "url": "https:\/\/assets.foreo.com\/local\/2021-01\/bundle_IRISmint-LUNAfofo-pink2.png?G018RjSM1FHq4XGAjGO2htZoIXcVFlGB",
-                    "alt": "iris \u0026 luna fofo"
-                }, {
-                    "badge": {
-                        "discount_badge": null,
-                        "promo_badge": "https:\/\/assets.foreo.com\/local\/static\/assets\/gift-flat_1.png?MMsxNk_qt7MN4kNqYuJDMGRJnmkxfBTJ",
-                        "award_badge": null
-                    },
-                    "product_combo": ["1143", "1558"],
-                    "url": "https:\/\/assets.foreo.com\/local\/2021-01\/bundle_IRISmint-LUNAfofo-pink-3.png?FWCOa0f4Qh_xAWu8mUqyfNj2MPEErNti",
-                    "alt": "iris \u0026 luna fofo"
-                }],
+                "images": [
+
+                    { "product_combo": ["1143", "1553"], "badge": { "discount_badge": null, "promo_badge": "https://assets.foreo.com/local/static/assets/gift-flat_1.png", "award_badge": null }, "url": "https://assets.foreo.com/local/2020-04/bundle_IRISmint-LUNAfofo-black.png", "alt": "iris \u0026 luna fofo" },
+                    { "product_combo": ["1143", "1554"], "badge": { "discount_badge": null, "promo_badge": "https://assets.foreo.com/local/static/assets/gift-flat_1.png", "award_badge": null }, "url": "https://assets.foreo.com/local/2021-01/bundle_IRISmint-LUNAfofo-yellow.png", "alt": "iris \u0026 luna fofo" },
+                    { "product_combo": ["1143", "1555"], "badge": { "discount_badge": null, "promo_badge": "https://assets.foreo.com/local/static/assets/gift-flat_1.png", "award_badge": null }, "url": "https://assets.foreo.com/local/2020-04/bundle_IRISmint-LUNAfofo-fuchsia.png", "alt": "iris \u0026 luna fofo" },
+                    { "product_combo": ["1143", "1558"], "badge": { "discount_badge": null, "promo_badge": "https://assets.foreo.com/local/static/assets/gift-flat_1.png", "award_badge": null }, "url": "https://assets.foreo.com/local/2020-04/bundle_IRISmint-LUNAfofo-pink.png", "alt": "iris \u0026 luna fofo" },
+                    { "product_combo": ["1143", "1559"], "badge": { "discount_badge": null, "promo_badge": "https://assets.foreo.com/local/static/assets/gift-flat_1.png", "award_badge": null }, "url": "https://assets.foreo.com/local/2020-04/bundle_IRISmint-LUNAfofo-purple.png", "alt": "iris \u0026 luna fofo" },
+
+
+                    { "product_combo": ["1151", "1553"], "badge": { "discount_badge": null, "promo_badge": "https://assets.foreo.com/local/static/assets/gift-flat_1.png", "award_badge": null }, "url": "https://assets.foreo.com/local/2020-04/bundle_IRISpink-LUNAfofo-black.png", "alt": "iris \u0026 luna fofo" },
+                    { "product_combo": ["1151", "1554"], "badge": { "discount_badge": null, "promo_badge": "https://assets.foreo.com/local/static/assets/gift-flat_1.png", "award_badge": null }, "url": "https://assets.foreo.com/local/2021-01/bundle_IRISpink-LUNAfofo-yellow.png", "alt": "iris \u0026 luna fofo" },
+                    { "product_combo": ["1151", "1555"], "badge": { "discount_badge": null, "promo_badge": "https://assets.foreo.com/local/static/assets/gift-flat_1.png", "award_badge": null }, "url": "https://assets.foreo.com/local/2021-01/bundle_IRISpink-LUNAfofo-fuchsia.png", "alt": "iris \u0026 luna fofo" },
+                    { "product_combo": ["1151", "1558"], "badge": { "discount_badge": null, "promo_badge": "https://assets.foreo.com/local/static/assets/gift-flat_1.png", "award_badge": null }, "url": "https://assets.foreo.com/local/2020-04/bundle_IRISpink-LUNAfofo-pink.png", "alt": "iris \u0026 luna fofo" },
+                    { "product_combo": ["1151", "1559"], "badge": { "discount_badge": null, "promo_badge": "https://assets.foreo.com/local/static/assets/gift-flat_1.png", "award_badge": null }, "url": "https://assets.foreo.com/local/2020-04/bundle_IRISpink-LUNAfofo-purple.png", "alt": "iris \u0026 luna fofo" },
+
+
+                    { "product_combo": ["1152", "1553"], "badge": { "discount_badge": null, "promo_badge": "https://assets.foreo.com/local/static/assets/gift-flat_1.png", "award_badge": null }, "url": "https://assets.foreo.com/local/2020-04/bundle_IRISfuchsia-LUNAfofo-black.png", "alt": "iris \u0026 luna fofo" },
+                    { "product_combo": ["1152", "1554"], "badge": { "discount_badge": null, "promo_badge": "https://assets.foreo.com/local/static/assets/gift-flat_1.png", "award_badge": null }, "url": "https://assets.foreo.com/local/2021-01/bundle_IRISfuchsia-LUNAfofo-yellow.png", "alt": "iris \u0026 luna fofo" },
+                    { "product_combo": ["1152", "1555"], "badge": { "discount_badge": null, "promo_badge": "https://assets.foreo.com/local/static/assets/gift-flat_1.png", "award_badge": null }, "url": "https://assets.foreo.com/local/2020-04/bundle_IRISfuchsia-LUNAfofo-fuchsia.png", "alt": "iris \u0026 luna fofo" },
+                    { "product_combo": ["1152", "1558"], "badge": { "discount_badge": null, "promo_badge": "https://assets.foreo.com/local/static/assets/gift-flat_1.png", "award_badge": null }, "url": "https://assets.foreo.com/local/2020-04/bundle_IRISfuchsia-LUNAfofo-pink.png", "alt": "iris \u0026 luna fofo" },
+                    { "product_combo": ["1152", "1559"], "badge": { "discount_badge": null, "promo_badge": "https://assets.foreo.com/local/static/assets/gift-flat_1.png", "award_badge": null }, "url": "https://assets.foreo.com/local/2020-04/bundle_IRISfuchsia-LUNAfofo-purple.png", "alt": "iris \u0026 luna fofo" },
+
+
+                    { "product_combo": ["1407", "1553"], "badge": { "discount_badge": null, "promo_badge": "https://assets.foreo.com/local/static/assets/gift-flat_1.png", "award_badge": null }, "url": "https://assets.foreo.com/local/2020-04/bundle_IRISblack-LUNAfofo-black.png", "alt": "iris \u0026 luna fofo" },
+                    { "product_combo": ["1407", "1554"], "badge": { "discount_badge": null, "promo_badge": "https://assets.foreo.com/local/static/assets/gift-flat_1.png", "award_badge": null }, "url": "https://assets.foreo.com/local/2021-01/bundle_IRISblack-LUNAfofo-yellow.png", "alt": "iris \u0026 luna fofo" },
+                    { "product_combo": ["1407", "1555"], "badge": { "discount_badge": null, "promo_badge": "https://assets.foreo.com/local/static/assets/gift-flat_1.png", "award_badge": null }, "url": "https://assets.foreo.com/local/2020-04/bundle_IRISblack-LUNAfofo-fuchsia.png", "alt": "iris \u0026 luna fofo" },
+                    { "product_combo": ["1407", "1558"], "badge": { "discount_badge": null, "promo_badge": "https://assets.foreo.com/local/static/assets/gift-flat_1.png", "award_badge": null }, "url": "https://assets.foreo.com/local/2020-04/bundle_IRISblack-LUNAfofo-pink.png", "alt": "iris \u0026 luna fofo" },
+                    { "product_combo": ["1407", "1559"], "badge": { "discount_badge": null, "promo_badge": "https://assets.foreo.com/local/static/assets/gift-flat_1.png", "award_badge": null }, "url": "https://assets.foreo.com/local/2020-04/bundle_IRISblack-LUNAfofo-purple.png", "alt": "iris \u0026 luna fofo" }
+
+                ],
                 "addToCart": {
                     "id": "buy_now",
                     "title": "Buy",
                     "disabled": false
                 },
-                "contains": "\u003Cb\u003EBundle contains: \u003C\/b\u003EIRIS, LUNA fofo, LUNA, ISSA",
+                "contains": "\u003Cb\u003EBundle contains: \u003C/b\u003EIRIS, LUNA fofo, LUNA, ISSA",
                 "perks": [{
                     "title": "WARRANTY",
                     "category": "warranty",
-                    "icon": "https:\/\/assets.foreo.com\/files\/static\/2019-09\/warranty.svg",
+                    "icon": "https://assets.foreo.com/files/static/2019-09/warranty.svg",
                     "description": "2 years"
                 }, {
                     "title": "QUALITY GUARANTEE",
                     "category": "guarantee",
-                    "icon": "https:\/\/assets.foreo.com\/files\/static\/2019-09\/award.svg",
+                    "icon": "https://assets.foreo.com/files/static/2019-09/award.svg",
                     "description": "10 Years"
                 }],
                 "special_notice": null

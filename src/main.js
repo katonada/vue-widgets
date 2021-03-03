@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import Widget1 from './App.vue';
+import CommerceBlock from './CommerceBlock.vue';
 
 Vue.config.productionTip = false;
 Vue.config.devtools = process.env.BUILD_TYPE !== 'production';
@@ -26,11 +26,9 @@ Vue.config.performance = process.env.NODE_ENV !== 'production';
 
 // create a constructor for your widget
 const Widget = Vue.extend({
+
     render (h) {
-        console.log('api', this.$el.dataset);
-        console.log('api', this.$el.dataset.api);
-        console.log('instance-id', this.$el.dataset.instanceId);
-        return h(Widget1, {
+        return h(CommerceBlock, {
             props: {
                 apiUrl: this.$el.dataset.api,
                 apiInstanceId: this.$el.dataset.instanceId,
@@ -40,7 +38,4 @@ const Widget = Vue.extend({
 });
 
 const nodes = document.querySelectorAll('.commerce_block');
-for (let i = 0; i < nodes.length; ++i) {
-    // eslint-disable-next-line no-new
-    new Widget({ el: nodes[i] });
-}
+nodes.forEach(node => new Widget({ el: node }));

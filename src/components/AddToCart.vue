@@ -155,7 +155,9 @@
 import { apiServices } from '@/mixins/apiMixin';
 
 export default {
+
     name: 'AddToCart',
+
     props: {
         product: {
             type: Object,
@@ -182,6 +184,7 @@ export default {
             default: () => []
         }
     },
+
     data () {
         return {
             bundleFinalPrice: 0,
@@ -208,6 +211,7 @@ export default {
             activeProduct: this.product.variations[this.activeVariation]
         };
     },
+
     computed: {
 
         calculateSavings () {
@@ -351,6 +355,7 @@ export default {
             const productInstallments = this.activeProduct.price.installments;
             const config = productInstallments.properties.conf;
 
+            // eslint-disable-next-line new-cap
             if (productInstallments.type === 'afterPay_us' || productInstallments.type === 'afterPay_au') new window.presentAfterPay(config).init();
 
             if (productInstallments.type === 'moip') this.initMoip();

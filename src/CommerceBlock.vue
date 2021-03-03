@@ -1,9 +1,5 @@
 <template>
     <div>
-        <get-product-info
-            :api-url="apiUrl"
-            @product-response="solveProductResponse"
-        />
 
         <!-- BEGIN MULTIPLE ITEMS (TABS) RENDER -->
         <tabs
@@ -42,23 +38,23 @@
 </template>
 
 <script>
-import GetProductInfo from './components/GetProductInfo.vue';
+import { apiServices } from '@/mixins/apiMixin';
+
 import ProductView from './components/ProductView.vue';
 import BundleView from './components/BundleView.vue';
 import BundleMasksView from './components/BundleMasksView.vue';
 import Tabs from './components/Tabs.vue';
 
-// console.clear();
-
 export default {
     name: 'App',
+
     components: {
-        GetProductInfo,
         ProductView,
         BundleView,
         BundleMasksView,
         Tabs
     },
+
     props: {
         apiUrl: {
             type: String,
@@ -69,20 +65,63 @@ export default {
             default: ''
         }
     },
+
     data () {
         return {
             productArray: [],
-            instanceId: '',
             productDisplay: '',
-            blockViewMode: ''
+
+            instanceId: 'hash123hash',
+            productId: '156', // 128,129  //156
+            productType: 'product', // 'bundle
+            blockViewMode: 'ecommerce_b',
+            language: 'en'
         };
     },
+
+    created () {
+        this.getProduct();
+    },
+
     methods: {
+
         solveProductResponse (response) {
             this.productArray = response.ProductArray;
             this.productDisplay = response.view;
             this.instanceId = response.instanceId;
             this.blockViewMode = response.blockViewMode;
+        },
+
+        getProduct () {
+            // .get(process.env.VUE_APP_GET + this.productType + '/' + this.productId, {
+            apiServices.get(`api/${this.apiUrl}.json`, {
+                headers: {
+                    'Accept-Language': this.language
+                }
+            })
+                .then(response => { this.emitProductInfo(response.data.data); })
+                .catch(error => { console.log(error); });
+        },
+
+        emitProductInfo (ProductArray) {
+
+            console.log(ProductArray.type);
+
+            if (ProductArray.type === 'product') {
+                this.view = 'Product';
+            } else {
+                // ProductArray.attributes[0].bundle === 'default' ? this.view = 'Bundle' : this.view = 'BundleMasks';
+                this.view = (ProductArray.attributes[0].bundle === 'default') ? 'Bundle' : 'BundleMasks';
+            }
+
+            const productResponse = {
+                ProductArray: ProductArray.attributes,
+                view: this.view,
+                instanceId: this.instanceId,
+                blockViewMode: this.blockViewMode
+            };
+
+            this.solveProductResponse(productResponse); // $emit event must be kebab-case like components
         }
     }
 };

@@ -19,7 +19,7 @@
                 <div class="ecom__data">
                     <info :product="product" :active-variation="activeVariation" class="ecom__info" />
 
-                    <div v-if="product.variations" class="ecom__switcher">
+                    <div v-if="product.variations.length" class="ecom__switcher">
                         <!-- BEGIN VARIATIONS (always 0 for bundles but we leave the possibility open) -->
                         <template v-for="variation in product.variations">
                             <!-- BEGIN PRODUCTS (devices that comprise bundle) -->
@@ -28,8 +28,9 @@
                                 :key="index"
                                 :class="'ecom__switcher-item ecom__switcher-item--'"
                             >
+
                                 <!--BEGIN SWITCHER -->
-                                <template v-if="property.variations.length > 1">
+                                <template v-if="property.variations.length">
                                     <h2 class="ecom__switcher-product-name">
                                         {{ property.title }}
                                     </h2>
@@ -46,30 +47,30 @@
 
                                     <div class="ecom__switcher-dots">
                                         <label
-                                            v-for="(variation, key, index) in property.variations"
-                                            :key="index"
-                                            :style="{ 'background-color': variation.properties.color }"
-                                            :class="'ecom__switcher-dot ecom__switcher-dot--' + variation.id"
+                                            v-for="(propVariation, key, propIndex) in property.variations"
+                                            :key="propIndex"
+                                            :style="{ 'background-color': propVariation.properties.color }"
+                                            :class="'ecom__switcher-dot ecom__switcher-dot--' + propVariation.id"
                                         >
                                             <input
                                                 type="radio"
                                                 :name="property.id + instance"
-                                                :class="'id' + variation.id"
+                                                :class="'id' + propVariation.id"
                                                 :checked="key === 0"
                                                 @change="
                                                     calculateCombination(
                                                         propertyKey,
-                                                        variation.id,
+                                                        propVariation.id,
                                                         key,
-                                                        parseFloat(variation.price.original.number)
+                                                        +propVariation.price.original.number
                                                     )
                                                 "
                                             >
                                             <span
-                                                v-if="variation.properties.id === 'volume' || variation.properties.id === 'country'"
+                                                v-if="propVariation.properties.id === 'volume' || propVariation.properties.id === 'country'"
                                                 class="ecom__variation-name"
                                             >
-                                                {{ variation.properties.label }}
+                                                Label: {{ propVariation.properties.label }}
                                             </span>
                                             <span v-else />
                                         </label>
@@ -92,21 +93,21 @@
                         :product="product"
                         :active-variation="activeVariation"
                         :type="'bundle'"
-                        :bundle-price="activePrices.reduce((a, b) => a + b)"
+                        :bundle-price="+activePrices.reduce((a, b) => a + b)"
                         :active-combination="activeCombination"
                         class="ecom__atc"
                     />
 
-                    <div v-if="product.variations[activeVariation].special_notice" class="ecom__special-notes-wrap">
+                    <div v-if="productActive.special_notice" class="ecom__special-notes-wrap">
                         <div class="ecom__special-notes ecom__special-notes--variation">
                             <special-notice
-                                v-if="product.variations[activeVariation].special_notice"
-                                :variation="product.variations[activeVariation]"
+                                v-if="productActive.special_notice"
+                                :variation="productActive"
                             />
                         </div>
                     </div>
                     <div
-                        v-else-if="product.special_notice && !product.variations[activeVariation].special_notice"
+                        v-else-if="product.special_notice && !productActive.special_notice"
                         class="ecom__special-notes-wrap"
                     >
                         <div class="ecom__special-notes">
@@ -120,8 +121,8 @@
                     </div>
 
                     <perks
-                        v-if="product.variations[activeVariation].perks"
-                        :variation="product.variations[activeVariation]"
+                        v-if="productActive.perks"
+                        :variation="productActive"
                         class="ecom__perks"
                     />
                 </div>
@@ -140,7 +141,9 @@ import Slider from './Slider.vue';
 import SpecialNotice from './SpecialNotice';
 
 export default {
+
     name: 'BundleView',
+
     components: {
         Loader,
         AddToCart,
@@ -150,6 +153,7 @@ export default {
         Info,
         SpecialNotice
     },
+
     props: {
         product: {
             type: Object,
@@ -160,6 +164,7 @@ export default {
             default: ''
         }
     },
+
     data () {
         return {
             activeVariation: 0, // Will always be 0 for Bundles
@@ -167,34 +172,56 @@ export default {
             activePrices: [0, 0, 0, 0, 0, 0, 0, 0],
             activeCombination: [],
             activeImages: [],
-            buy: {}
+            buy: {},
         };
     },
-    beforeMount () {
+
+    computed: {
+
+        productActive () {
+            return this.product.variations[this.activeVariation] || { special_notice:'', perks: '' };
+        },
+    },
+
+    created () {
         this.setInitialValues();
     },
+
     methods: {
+
         setInitialValues () {
-            if (this.product.variations[this.activeVariation].properties.length) {
+
+            const product = this.product.variations[this.activeVariation];
+
+            if (product.properties.length) {
+
                 const tempCombination = [];
-                for (let i = 0; i < this.product.variations[this.activeVariation].properties.length; i++) {
-                    if (this.product.variations[this.activeVariation].properties[i].variations.length !== 0) {
-                        tempCombination.push(this.product.variations[this.activeVariation].properties[i].variations[0].id);
-                        this.activePrices[i] = parseFloat(this.product.variations[this.activeVariation].properties[i].variations[0].price.original.number);
+                product.properties.forEach((prop, index) => {
+
+                    if (prop.variations.length) {
+                        tempCombination.push(prop.variations[0].id);
+                        this.activePrices[index] = prop.variations[0].price.original.number;
                     }
-                }
+                });
+
                 this.activeCombination = tempCombination;
                 this.calculateCombination();
             }
         },
+
         calculateCombination (place, value, key, price) {
+
             this.activeDevices[place] = key;
             this.activeCombination[place] = value;
             this.activePrices[place] = price;
             this.activeImages = [];
-            this.product.variations[this.activeVariation].images.forEach(image => {
-                const difference = image.product_combo.filter(x => !this.activeCombination.includes(x));
-                if (difference.length === 0) this.activeImages.push(image);
+
+            const { images } = this.product.variations[this.activeVariation];
+
+            images.forEach(image => {
+
+                const difference = image.product_combo.filter(combo => !this.activeCombination.includes(combo));
+                if (difference.length < 1) this.activeImages.push(image);
             });
 
             // In case of content fail prevent slider link breaking
