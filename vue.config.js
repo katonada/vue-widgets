@@ -4,7 +4,7 @@ module.exports = {
     publicPath: '',
     configureWebpack: {
         optimization: {
-            // splitChunks: false
+            splitChunks: false
         },
         output: {
             filename: '[name].js',

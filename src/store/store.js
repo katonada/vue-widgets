@@ -18,7 +18,7 @@ export const store = new Vuex.Store({
 
     mutations: {
         // device based
-        SET_MQ (state, mq) { state.mq = !state.mq; }
+        SET_MQ (state /* , mq */) { state.mq = !state.mq; }
 
     },
 
