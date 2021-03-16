@@ -33,7 +33,7 @@ new Vue({
     render: h => h(Header)
 });
 
-// create a constructor for your widget
+// widget constructor
 const Widget = Vue.extend({
 
     store,

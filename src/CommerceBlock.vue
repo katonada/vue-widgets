@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex';
+import { mapGetters } from 'vuex';
 import { apiServices } from '@/mixins/apiMixin';
 
 import ProductView from './components/ProductView.vue';
